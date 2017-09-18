@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbQLTSLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="dbQLTSLEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="SP_DON_VI_Delete">
+      <Parameter Name="ID_DONVI" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DON_VI_GetAll" ReturnType="Collection(dbQLTSLModel.SP_DON_VI_GetAll_Result)" />
+    <FunctionImport Name="SP_DON_VI_GetByID_DONVI" ReturnType="Collection(dbQLTSLModel.SP_DON_VI_GetByID_DONVI_Result)">
+      <Parameter Name="ID_DONVI" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DON_VI_Insert">
+      <Parameter Name="TEN_DONVI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DON_VI_Update">
+      <Parameter Name="ID_DONVI" Mode="In" Type="Int32" />
+      <Parameter Name="TEN_DONVI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KHACH_HANG_Delete">
+      <Parameter Name="ID_KHACHHANG" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KHACH_HANG_GetAll" ReturnType="Collection(dbQLTSLModel.SP_KHACH_HANG_GetAll_Result)" />
+    <FunctionImport Name="SP_KHACH_HANG_GetByID_KHACHHANG" ReturnType="Collection(dbQLTSLModel.SP_KHACH_HANG_GetByID_KHACHHANG_Result)">
+      <Parameter Name="ID_KHACHHANG" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KHACH_HANG_Insert">
+      <Parameter Name="CVLAN" Mode="In" Type="Int32" />
+      <Parameter Name="ID_LOAIDICHVU" Mode="In" Type="Int32" />
+      <Parameter Name="ID_NHOMKHACHHANG" Mode="In" Type="Int32" />
+      <Parameter Name="ID_TRANGTHAI" Mode="In" Type="Int32" />
+      <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
+      <Parameter Name="IPGATEWAY" Mode="In" Type="String" />
+      <Parameter Name="IPLAN" Mode="In" Type="String" />
+      <Parameter Name="IPWAN" Mode="In" Type="String" />
+      <Parameter Name="SVLAN" Mode="In" Type="Int32" />
+      <Parameter Name="TEN_KHACHHANG" Mode="In" Type="String" />
+      <Parameter Name="THOIGIAN_CUNGCAP" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KHACH_HANG_Update">
+      <Parameter Name="CVLAN" Mode="In" Type="Int32" />
+      <Parameter Name="ID_KHACHHANG" Mode="In" Type="Int32" />
+      <Parameter Name="ID_LOAIDICHVU" Mode="In" Type="Int32" />
+      <Parameter Name="ID_NHOMKHACHHANG" Mode="In" Type="Int32" />
+      <Parameter Name="ID_TRANGTHAI" Mode="In" Type="Int32" />
+      <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
+      <Parameter Name="IPGATEWAY" Mode="In" Type="String" />
+      <Parameter Name="IPLAN" Mode="In" Type="String" />
+      <Parameter Name="IPWAN" Mode="In" Type="String" />
+      <Parameter Name="SVLAN" Mode="In" Type="Int32" />
+      <Parameter Name="TEN_KHACHHANG" Mode="In" Type="String" />
+      <Parameter Name="THOIGIAN_CUNGCAP" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KHACHHANG_THIETBI_Delete">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KHACHHANG_THIETBI_GetAll" ReturnType="Collection(dbQLTSLModel.SP_KHACHHANG_THIETBI_GetAll_Result)" />
+    <FunctionImport Name="SP_KHACHHANG_THIETBI_GetByID" ReturnType="Collection(dbQLTSLModel.SP_KHACHHANG_THIETBI_GetByID_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KHACHHANG_THIETBI_Insert">
+      <Parameter Name="CONG" Mode="In" Type="String" />
+      <Parameter Name="ID_KHACHHANG" Mode="In" Type="Int32" />
+      <Parameter Name="ID_THIETBI" Mode="In" Type="Int32" />
+      <Parameter Name="TOCDO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KHACHHANG_THIETBI_Update">
+      <Parameter Name="CONG" Mode="In" Type="String" />
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="ID_KHACHHANG" Mode="In" Type="Int32" />
+      <Parameter Name="ID_THIETBI" Mode="In" Type="Int32" />
+      <Parameter Name="TOCDO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LOAI_DICHVU_Delete">
+      <Parameter Name="ID_LOAI_DICHVU" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LOAI_DICHVU_GetAll" ReturnType="Collection(dbQLTSLModel.SP_LOAI_DICHVU_GetAll_Result)" />
+    <FunctionImport Name="SP_LOAI_DICHVU_GetByID_LOAI_DICHVU" ReturnType="Collection(dbQLTSLModel.SP_LOAI_DICHVU_GetByID_LOAI_DICHVU_Result)">
+      <Parameter Name="ID_LOAI_DICHVU" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LOAI_DICHVU_Insert">
+      <Parameter Name="TEN_LOAI_DICHVU" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LOAI_DICHVU_Update">
+      <Parameter Name="ID_LOAI_DICHVU" Mode="In" Type="Int32" />
+      <Parameter Name="TEN_LOAI_DICHVU" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NGUOI_DUNG_Delete">
+      <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NGUOI_DUNG_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result)" />
+    <FunctionImport Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result)">
+      <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NGUOI_DUNG_Insert">
+      <Parameter Name="HO_TEN" Mode="In" Type="String" />
+      <Parameter Name="ID_DONVI" Mode="In" Type="Int32" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="SDT" Mode="In" Type="Int32" />
+      <Parameter Name="USERNAME" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_Delete">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetAll_Result)" />
+    <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_GetByID" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetByID_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_Insert">
+      <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+      <Parameter Name="ID_QUYEN" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_Update">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+      <Parameter Name="ID_QUYEN" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NGUOI_DUNG_Update">
+      <Parameter Name="HO_TEN" Mode="In" Type="String" />
+      <Parameter Name="ID_DONVI" Mode="In" Type="Int32" />
+      <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="SDT" Mode="In" Type="Int32" />
+      <Parameter Name="USERNAME" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NHOM_KHACH_HANG_Delete">
+      <Parameter Name="ID_NHOMKHACHHANG" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NHOM_KHACH_HANG_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NHOM_KHACH_HANG_GetAll_Result)" />
+    <FunctionImport Name="SP_NHOM_KHACH_HANG_GetByID_NHOMKHACHHANG" ReturnType="Collection(dbQLTSLModel.SP_NHOM_KHACH_HANG_GetByID_NHOMKHACHHANG_Result)">
+      <Parameter Name="ID_NHOMKHACHHANG" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NHOM_KHACH_HANG_Insert">
+      <Parameter Name="TEN_NHOMKHACHHANG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_NHOM_KHACH_HANG_Update">
+      <Parameter Name="ID_NHOMKHACHHANG" Mode="In" Type="Int32" />
+      <Parameter Name="TEN_NHOMKHACHHANG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_QUYEN_Delete">
+      <Parameter Name="ID_QUYEN" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_QUYEN_GetAll" ReturnType="Collection(dbQLTSLModel.SP_QUYEN_GetAll_Result)" />
+    <FunctionImport Name="SP_QUYEN_GetByID_QUYEN" ReturnType="Collection(dbQLTSLModel.SP_QUYEN_GetByID_QUYEN_Result)">
+      <Parameter Name="ID_QUYEN" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_QUYEN_Insert">
+      <Parameter Name="TEN_QUYEN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_QUYEN_Update">
+      <Parameter Name="ID_QUYEN" Mode="In" Type="Int32" />
+      <Parameter Name="TEN_QUYEN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_THIET_BI_Delete">
+      <Parameter Name="ID_THIETBI" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_THIET_BI_GetAll" ReturnType="Collection(dbQLTSLModel.SP_THIET_BI_GetAll_Result)" />
+    <FunctionImport Name="SP_THIET_BI_GetByID_THIETBI" ReturnType="Collection(dbQLTSLModel.SP_THIET_BI_GetByID_THIETBI_Result)">
+      <Parameter Name="ID_THIETBI" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_THIET_BI_Insert">
+      <Parameter Name="TEN_THIETBI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_THIET_BI_Update">
+      <Parameter Name="ID_THIETBI" Mode="In" Type="Int32" />
+      <Parameter Name="TEN_THIETBI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_TRANG_THAI_Delete">
+      <Parameter Name="ID_TRANGTHAI" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_TRANG_THAI_GetAll" ReturnType="Collection(dbQLTSLModel.SP_TRANG_THAI_GetAll_Result)" />
+    <FunctionImport Name="SP_TRANG_THAI_GetByID_TRANGTHAI" ReturnType="Collection(dbQLTSLModel.SP_TRANG_THAI_GetByID_TRANGTHAI_Result)">
+      <Parameter Name="ID_TRANGTHAI" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_TRANG_THAI_Insert">
+      <Parameter Name="TEN_TRANGTHAI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_TRANG_THAI_Update">
+      <Parameter Name="ID_TRANGTHAI" Mode="In" Type="Int32" />
+      <Parameter Name="TEN_TRANGTHAI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_VUNGKETNOI_Delete">
+      <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_VUNGKETNOI_GetAll" ReturnType="Collection(dbQLTSLModel.SP_VUNGKETNOI_GetAll_Result)" />
+    <FunctionImport Name="SP_VUNGKETNOI_GetByID_VUNGKETNOI" ReturnType="Collection(dbQLTSLModel.SP_VUNGKETNOI_GetByID_VUNGKETNOI_Result)">
+      <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_VUNGKETNOI_Insert">
+      <Parameter Name="TEN_VUNGKETNOI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_VUNGKETNOI_Update">
+      <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
+      <Parameter Name="TEN_VUNGKETNOI" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SP_DON_VI_GetAll_Result">
+    <Property Type="Int32" Name="ID_DONVI" Nullable="false" />
+    <Property Type="String" Name="TEN_DONVI" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="SP_DON_VI_GetByID_DONVI_Result">
+    <Property Type="Int32" Name="ID_DONVI" Nullable="false" />
+    <Property Type="String" Name="TEN_DONVI" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="SP_KHACH_HANG_GetAll_Result">
+    <Property Type="Int32" Name="CVLAN" Nullable="true" />
+    <Property Type="Int32" Name="ID_KHACHHANG" Nullable="false" />
+    <Property Type="Int32" Name="ID_LOAIDICHVU" Nullable="false" />
+    <Property Type="Int32" Name="ID_NHOMKHACHHANG" Nullable="false" />
+    <Property Type="Int32" Name="ID_TRANGTHAI" Nullable="false" />
+    <Property Type="Int32" Name="ID_VUNGKETNOI" Nullable="false" />
+    <Property Type="String" Name="IPGATEWAY" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPLAN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPWAN" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SVLAN" Nullable="true" />
+    <Property Type="String" Name="TEN_KHACHHANG" Nullable="true" />
+    <Property Type="DateTime" Name="THOIGIAN_CUNGCAP" Nullable="true" Precision="23" />
+    <Property Type="String" Name="TEN_LOAI_DICHVU_LOAI_DICHVUJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TEN_NHOMKHACHHANG_NHOM_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="String" Name="TEN_TRANGTHAI_TRANG_THAIJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TEN_VUNGKETNOI_VUNGKETNOIJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_KHACH_HANG_GetByID_KHACHHANG_Result">
+    <Property Type="Int32" Name="CVLAN" Nullable="true" />
+    <Property Type="Int32" Name="ID_KHACHHANG" Nullable="false" />
+    <Property Type="Int32" Name="ID_LOAIDICHVU" Nullable="false" />
+    <Property Type="Int32" Name="ID_NHOMKHACHHANG" Nullable="false" />
+    <Property Type="Int32" Name="ID_TRANGTHAI" Nullable="false" />
+    <Property Type="Int32" Name="ID_VUNGKETNOI" Nullable="false" />
+    <Property Type="String" Name="IPGATEWAY" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPLAN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPWAN" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SVLAN" Nullable="true" />
+    <Property Type="String" Name="TEN_KHACHHANG" Nullable="true" />
+    <Property Type="DateTime" Name="THOIGIAN_CUNGCAP" Nullable="true" Precision="23" />
+    <Property Type="String" Name="TEN_LOAI_DICHVU_LOAI_DICHVUJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TEN_NHOMKHACHHANG_NHOM_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="String" Name="TEN_TRANGTHAI_TRANG_THAIJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TEN_VUNGKETNOI_VUNGKETNOIJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_KHACHHANG_THIETBI_GetAll_Result">
+    <Property Type="String" Name="CONG" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="ID_KHACHHANG" Nullable="false" />
+    <Property Type="Int32" Name="ID_THIETBI" Nullable="false" />
+    <Property Type="String" Name="TOCDO" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CVLAN_KHACH_HANGJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_LOAIDICHVU_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="Int32" Name="ID_NHOMKHACHHANG_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="Int32" Name="ID_TRANGTHAI_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="Int32" Name="ID_VUNGKETNOI_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="String" Name="IPGATEWAY_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPLAN_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPWAN_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SVLAN_KHACH_HANGJoin" Nullable="true" />
+    <Property Type="String" Name="TEN_KHACHHANG_KHACH_HANGJoin" Nullable="true" />
+    <Property Type="DateTime" Name="THOIGIAN_CUNGCAP_KHACH_HANGJoin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="TEN_THIETBI_THIET_BIJoin" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_KHACHHANG_THIETBI_GetByID_Result">
+    <Property Type="String" Name="CONG" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="ID_KHACHHANG" Nullable="false" />
+    <Property Type="Int32" Name="ID_THIETBI" Nullable="false" />
+    <Property Type="String" Name="TOCDO" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CVLAN_KHACH_HANGJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_LOAIDICHVU_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="Int32" Name="ID_NHOMKHACHHANG_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="Int32" Name="ID_TRANGTHAI_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="Int32" Name="ID_VUNGKETNOI_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="String" Name="IPGATEWAY_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPLAN_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPWAN_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SVLAN_KHACH_HANGJoin" Nullable="true" />
+    <Property Type="String" Name="TEN_KHACHHANG_KHACH_HANGJoin" Nullable="true" />
+    <Property Type="DateTime" Name="THOIGIAN_CUNGCAP_KHACH_HANGJoin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="TEN_THIETBI_THIET_BIJoin" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_LOAI_DICHVU_GetAll_Result">
+    <Property Type="Int32" Name="ID_LOAI_DICHVU" Nullable="false" />
+    <Property Type="String" Name="TEN_LOAI_DICHVU" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_LOAI_DICHVU_GetByID_LOAI_DICHVU_Result">
+    <Property Type="Int32" Name="ID_LOAI_DICHVU" Nullable="false" />
+    <Property Type="String" Name="TEN_LOAI_DICHVU" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_NGUOI_DUNG_GetAll_Result">
+    <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
+    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
+    <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="SDT" Nullable="true" />
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result">
+    <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
+    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
+    <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="SDT" Nullable="true" />
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetAll_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
+    <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
+    <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
+    <Property Type="String" Name="PASSWORD_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="SDT_NGUOI_DUNGJoin" Nullable="true" />
+    <Property Type="String" Name="USERNAME_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetByID_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
+    <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
+    <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
+    <Property Type="String" Name="PASSWORD_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="SDT_NGUOI_DUNGJoin" Nullable="true" />
+    <Property Type="String" Name="USERNAME_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="SP_NHOM_KHACH_HANG_GetAll_Result">
+    <Property Type="Int32" Name="ID_NHOMKHACHHANG" Nullable="false" />
+    <Property Type="String" Name="TEN_NHOMKHACHHANG" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_NHOM_KHACH_HANG_GetByID_NHOMKHACHHANG_Result">
+    <Property Type="Int32" Name="ID_NHOMKHACHHANG" Nullable="false" />
+    <Property Type="String" Name="TEN_NHOMKHACHHANG" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_QUYEN_GetAll_Result">
+    <Property Type="Int32" Name="ID_QUYEN" Nullable="false" />
+    <Property Type="String" Name="TEN_QUYEN" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="SP_QUYEN_GetByID_QUYEN_Result">
+    <Property Type="Int32" Name="ID_QUYEN" Nullable="false" />
+    <Property Type="String" Name="TEN_QUYEN" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="SP_THIET_BI_GetAll_Result">
+    <Property Type="Int32" Name="ID_THIETBI" Nullable="false" />
+    <Property Type="String" Name="TEN_THIETBI" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_THIET_BI_GetByID_THIETBI_Result">
+    <Property Type="Int32" Name="ID_THIETBI" Nullable="false" />
+    <Property Type="String" Name="TEN_THIETBI" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_TRANG_THAI_GetAll_Result">
+    <Property Type="Int32" Name="ID_TRANGTHAI" Nullable="false" />
+    <Property Type="String" Name="TEN_TRANGTHAI" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_TRANG_THAI_GetByID_TRANGTHAI_Result">
+    <Property Type="Int32" Name="ID_TRANGTHAI" Nullable="false" />
+    <Property Type="String" Name="TEN_TRANGTHAI" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_VUNGKETNOI_GetAll_Result">
+    <Property Type="Int32" Name="ID_VUNGKETNOI" Nullable="false" />
+    <Property Type="String" Name="TEN_VUNGKETNOI" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_VUNGKETNOI_GetByID_VUNGKETNOI_Result">
+    <Property Type="Int32" Name="ID_VUNGKETNOI" Nullable="false" />
+    <Property Type="String" Name="TEN_VUNGKETNOI" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

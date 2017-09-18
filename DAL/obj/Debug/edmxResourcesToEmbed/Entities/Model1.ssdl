@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbQLTSLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="SP_DON_VI_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_DONVI" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_DON_VI_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_DON_VI_GetByID_DONVI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_DONVI" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_DON_VI_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TEN_DONVI" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_DON_VI_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_DONVI" Type="int" Mode="In" />
+    <Parameter Name="TEN_DONVI" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_KHACH_HANG_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_KHACHHANG" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_KHACH_HANG_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_KHACH_HANG_GetByID_KHACHHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_KHACHHANG" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_KHACH_HANG_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CVLAN" Type="int" Mode="In" />
+    <Parameter Name="ID_LOAIDICHVU" Type="int" Mode="In" />
+    <Parameter Name="ID_NHOMKHACHHANG" Type="int" Mode="In" />
+    <Parameter Name="ID_TRANGTHAI" Type="int" Mode="In" />
+    <Parameter Name="ID_VUNGKETNOI" Type="int" Mode="In" />
+    <Parameter Name="IPGATEWAY" Type="varchar" Mode="In" />
+    <Parameter Name="IPLAN" Type="varchar" Mode="In" />
+    <Parameter Name="IPWAN" Type="varchar" Mode="In" />
+    <Parameter Name="SVLAN" Type="int" Mode="In" />
+    <Parameter Name="TEN_KHACHHANG" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="THOIGIAN_CUNGCAP" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SP_KHACH_HANG_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CVLAN" Type="int" Mode="In" />
+    <Parameter Name="ID_KHACHHANG" Type="int" Mode="In" />
+    <Parameter Name="ID_LOAIDICHVU" Type="int" Mode="In" />
+    <Parameter Name="ID_NHOMKHACHHANG" Type="int" Mode="In" />
+    <Parameter Name="ID_TRANGTHAI" Type="int" Mode="In" />
+    <Parameter Name="ID_VUNGKETNOI" Type="int" Mode="In" />
+    <Parameter Name="IPGATEWAY" Type="varchar" Mode="In" />
+    <Parameter Name="IPLAN" Type="varchar" Mode="In" />
+    <Parameter Name="IPWAN" Type="varchar" Mode="In" />
+    <Parameter Name="SVLAN" Type="int" Mode="In" />
+    <Parameter Name="TEN_KHACHHANG" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="THOIGIAN_CUNGCAP" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SP_KHACHHANG_THIETBI_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_KHACHHANG_THIETBI_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_KHACHHANG_THIETBI_GetByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_KHACHHANG_THIETBI_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CONG" Type="varchar" Mode="In" />
+    <Parameter Name="ID_KHACHHANG" Type="int" Mode="In" />
+    <Parameter Name="ID_THIETBI" Type="int" Mode="In" />
+    <Parameter Name="TOCDO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_KHACHHANG_THIETBI_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CONG" Type="varchar" Mode="In" />
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="ID_KHACHHANG" Type="int" Mode="In" />
+    <Parameter Name="ID_THIETBI" Type="int" Mode="In" />
+    <Parameter Name="TOCDO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LOAI_DICHVU_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_LOAI_DICHVU" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_LOAI_DICHVU_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_LOAI_DICHVU_GetByID_LOAI_DICHVU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_LOAI_DICHVU" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_LOAI_DICHVU_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TEN_LOAI_DICHVU" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LOAI_DICHVU_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_LOAI_DICHVU" Type="int" Mode="In" />
+    <Parameter Name="TEN_LOAI_DICHVU" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_NGUOI_DUNG_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_NGUOIDUNG" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_NGUOI_DUNG_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_NGUOIDUNG" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_NGUOI_DUNG_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HO_TEN" Type="nvarchar" Mode="In" />
+    <Parameter Name="ID_DONVI" Type="int" Mode="In" />
+    <Parameter Name="PASSWORD" Type="nvarchar" Mode="In" />
+    <Parameter Name="SDT" Type="int" Mode="In" />
+    <Parameter Name="USERNAME" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_NGUOI_DUNG_QUYEN_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_NGUOI_DUNG_QUYEN_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_NGUOI_DUNG_QUYEN_GetByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_NGUOI_DUNG_QUYEN_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_NGUOIDUNG" Type="int" Mode="In" />
+    <Parameter Name="ID_QUYEN" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_NGUOI_DUNG_QUYEN_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="ID_NGUOIDUNG" Type="int" Mode="In" />
+    <Parameter Name="ID_QUYEN" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_NGUOI_DUNG_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HO_TEN" Type="nvarchar" Mode="In" />
+    <Parameter Name="ID_DONVI" Type="int" Mode="In" />
+    <Parameter Name="ID_NGUOIDUNG" Type="int" Mode="In" />
+    <Parameter Name="PASSWORD" Type="nvarchar" Mode="In" />
+    <Parameter Name="SDT" Type="int" Mode="In" />
+    <Parameter Name="USERNAME" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_NHOM_KHACH_HANG_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_NHOMKHACHHANG" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_NHOM_KHACH_HANG_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_NHOM_KHACH_HANG_GetByID_NHOMKHACHHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_NHOMKHACHHANG" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_NHOM_KHACH_HANG_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TEN_NHOMKHACHHANG" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_NHOM_KHACH_HANG_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_NHOMKHACHHANG" Type="int" Mode="In" />
+    <Parameter Name="TEN_NHOMKHACHHANG" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_QUYEN_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_QUYEN" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_QUYEN_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_QUYEN_GetByID_QUYEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_QUYEN" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_QUYEN_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TEN_QUYEN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_QUYEN_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_QUYEN" Type="int" Mode="In" />
+    <Parameter Name="TEN_QUYEN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_THIET_BI_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_THIETBI" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_THIET_BI_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_THIET_BI_GetByID_THIETBI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_THIETBI" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_THIET_BI_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TEN_THIETBI" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_THIET_BI_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_THIETBI" Type="int" Mode="In" />
+    <Parameter Name="TEN_THIETBI" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_TRANG_THAI_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_TRANGTHAI" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_TRANG_THAI_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_TRANG_THAI_GetByID_TRANGTHAI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_TRANGTHAI" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_TRANG_THAI_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TEN_TRANGTHAI" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_TRANG_THAI_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_TRANGTHAI" Type="int" Mode="In" />
+    <Parameter Name="TEN_TRANGTHAI" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_VUNGKETNOI_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_VUNGKETNOI" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_VUNGKETNOI_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_VUNGKETNOI_GetByID_VUNGKETNOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_VUNGKETNOI" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_VUNGKETNOI_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TEN_VUNGKETNOI" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_VUNGKETNOI_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_VUNGKETNOI" Type="int" Mode="In" />
+    <Parameter Name="TEN_VUNGKETNOI" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="dbQLTSLModelStoreContainer" />
+</Schema>

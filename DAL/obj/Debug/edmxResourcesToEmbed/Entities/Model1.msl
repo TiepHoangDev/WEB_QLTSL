@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbQLTSLModelStoreContainer" CdmEntityContainer="dbQLTSLEntities">
+    <FunctionImportMapping FunctionImportName="SP_DON_VI_Delete" FunctionName="dbQLTSLModel.Store.SP_DON_VI_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_DON_VI_GetAll" FunctionName="dbQLTSLModel.Store.SP_DON_VI_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_DON_VI_GetAll_Result">
+          <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
+          <ScalarProperty Name="TEN_DONVI" ColumnName="TEN_DONVI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DON_VI_GetByID_DONVI" FunctionName="dbQLTSLModel.Store.SP_DON_VI_GetByID_DONVI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_DON_VI_GetByID_DONVI_Result">
+          <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
+          <ScalarProperty Name="TEN_DONVI" ColumnName="TEN_DONVI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DON_VI_Insert" FunctionName="dbQLTSLModel.Store.SP_DON_VI_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_DON_VI_Update" FunctionName="dbQLTSLModel.Store.SP_DON_VI_Update" />
+    <FunctionImportMapping FunctionImportName="SP_KHACH_HANG_Delete" FunctionName="dbQLTSLModel.Store.SP_KHACH_HANG_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_KHACH_HANG_GetAll" FunctionName="dbQLTSLModel.Store.SP_KHACH_HANG_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_KHACH_HANG_GetAll_Result">
+          <ScalarProperty Name="CVLAN" ColumnName="CVLAN" />
+          <ScalarProperty Name="ID_KHACHHANG" ColumnName="ID_KHACHHANG" />
+          <ScalarProperty Name="ID_LOAIDICHVU" ColumnName="ID_LOAIDICHVU" />
+          <ScalarProperty Name="ID_NHOMKHACHHANG" ColumnName="ID_NHOMKHACHHANG" />
+          <ScalarProperty Name="ID_TRANGTHAI" ColumnName="ID_TRANGTHAI" />
+          <ScalarProperty Name="ID_VUNGKETNOI" ColumnName="ID_VUNGKETNOI" />
+          <ScalarProperty Name="IPGATEWAY" ColumnName="IPGATEWAY" />
+          <ScalarProperty Name="IPLAN" ColumnName="IPLAN" />
+          <ScalarProperty Name="IPWAN" ColumnName="IPWAN" />
+          <ScalarProperty Name="SVLAN" ColumnName="SVLAN" />
+          <ScalarProperty Name="TEN_KHACHHANG" ColumnName="TEN_KHACHHANG" />
+          <ScalarProperty Name="THOIGIAN_CUNGCAP" ColumnName="THOIGIAN_CUNGCAP" />
+          <ScalarProperty Name="TEN_LOAI_DICHVU_LOAI_DICHVUJoin" ColumnName="TEN_LOAI_DICHVU_LOAI_DICHVUJoin" />
+          <ScalarProperty Name="TEN_NHOMKHACHHANG_NHOM_KHACH_HANGJoin" ColumnName="TEN_NHOMKHACHHANG_NHOM_KHACH_HANGJoin" />
+          <ScalarProperty Name="TEN_TRANGTHAI_TRANG_THAIJoin" ColumnName="TEN_TRANGTHAI_TRANG_THAIJoin" />
+          <ScalarProperty Name="TEN_VUNGKETNOI_VUNGKETNOIJoin" ColumnName="TEN_VUNGKETNOI_VUNGKETNOIJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_KHACH_HANG_GetByID_KHACHHANG" FunctionName="dbQLTSLModel.Store.SP_KHACH_HANG_GetByID_KHACHHANG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_KHACH_HANG_GetByID_KHACHHANG_Result">
+          <ScalarProperty Name="CVLAN" ColumnName="CVLAN" />
+          <ScalarProperty Name="ID_KHACHHANG" ColumnName="ID_KHACHHANG" />
+          <ScalarProperty Name="ID_LOAIDICHVU" ColumnName="ID_LOAIDICHVU" />
+          <ScalarProperty Name="ID_NHOMKHACHHANG" ColumnName="ID_NHOMKHACHHANG" />
+          <ScalarProperty Name="ID_TRANGTHAI" ColumnName="ID_TRANGTHAI" />
+          <ScalarProperty Name="ID_VUNGKETNOI" ColumnName="ID_VUNGKETNOI" />
+          <ScalarProperty Name="IPGATEWAY" ColumnName="IPGATEWAY" />
+          <ScalarProperty Name="IPLAN" ColumnName="IPLAN" />
+          <ScalarProperty Name="IPWAN" ColumnName="IPWAN" />
+          <ScalarProperty Name="SVLAN" ColumnName="SVLAN" />
+          <ScalarProperty Name="TEN_KHACHHANG" ColumnName="TEN_KHACHHANG" />
+          <ScalarProperty Name="THOIGIAN_CUNGCAP" ColumnName="THOIGIAN_CUNGCAP" />
+          <ScalarProperty Name="TEN_LOAI_DICHVU_LOAI_DICHVUJoin" ColumnName="TEN_LOAI_DICHVU_LOAI_DICHVUJoin" />
+          <ScalarProperty Name="TEN_NHOMKHACHHANG_NHOM_KHACH_HANGJoin" ColumnName="TEN_NHOMKHACHHANG_NHOM_KHACH_HANGJoin" />
+          <ScalarProperty Name="TEN_TRANGTHAI_TRANG_THAIJoin" ColumnName="TEN_TRANGTHAI_TRANG_THAIJoin" />
+          <ScalarProperty Name="TEN_VUNGKETNOI_VUNGKETNOIJoin" ColumnName="TEN_VUNGKETNOI_VUNGKETNOIJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_KHACH_HANG_Insert" FunctionName="dbQLTSLModel.Store.SP_KHACH_HANG_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_KHACH_HANG_Update" FunctionName="dbQLTSLModel.Store.SP_KHACH_HANG_Update" />
+    <FunctionImportMapping FunctionImportName="SP_KHACHHANG_THIETBI_Delete" FunctionName="dbQLTSLModel.Store.SP_KHACHHANG_THIETBI_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_KHACHHANG_THIETBI_GetAll" FunctionName="dbQLTSLModel.Store.SP_KHACHHANG_THIETBI_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_KHACHHANG_THIETBI_GetAll_Result">
+          <ScalarProperty Name="CONG" ColumnName="CONG" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_KHACHHANG" ColumnName="ID_KHACHHANG" />
+          <ScalarProperty Name="ID_THIETBI" ColumnName="ID_THIETBI" />
+          <ScalarProperty Name="TOCDO" ColumnName="TOCDO" />
+          <ScalarProperty Name="CVLAN_KHACH_HANGJoin" ColumnName="CVLAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_LOAIDICHVU_KHACH_HANGJoin" ColumnName="ID_LOAIDICHVU_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_NHOMKHACHHANG_KHACH_HANGJoin" ColumnName="ID_NHOMKHACHHANG_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_TRANGTHAI_KHACH_HANGJoin" ColumnName="ID_TRANGTHAI_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_VUNGKETNOI_KHACH_HANGJoin" ColumnName="ID_VUNGKETNOI_KHACH_HANGJoin" />
+          <ScalarProperty Name="IPGATEWAY_KHACH_HANGJoin" ColumnName="IPGATEWAY_KHACH_HANGJoin" />
+          <ScalarProperty Name="IPLAN_KHACH_HANGJoin" ColumnName="IPLAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="IPWAN_KHACH_HANGJoin" ColumnName="IPWAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="SVLAN_KHACH_HANGJoin" ColumnName="SVLAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="TEN_KHACHHANG_KHACH_HANGJoin" ColumnName="TEN_KHACHHANG_KHACH_HANGJoin" />
+          <ScalarProperty Name="THOIGIAN_CUNGCAP_KHACH_HANGJoin" ColumnName="THOIGIAN_CUNGCAP_KHACH_HANGJoin" />
+          <ScalarProperty Name="TEN_THIETBI_THIET_BIJoin" ColumnName="TEN_THIETBI_THIET_BIJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_KHACHHANG_THIETBI_GetByID" FunctionName="dbQLTSLModel.Store.SP_KHACHHANG_THIETBI_GetByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_KHACHHANG_THIETBI_GetByID_Result">
+          <ScalarProperty Name="CONG" ColumnName="CONG" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_KHACHHANG" ColumnName="ID_KHACHHANG" />
+          <ScalarProperty Name="ID_THIETBI" ColumnName="ID_THIETBI" />
+          <ScalarProperty Name="TOCDO" ColumnName="TOCDO" />
+          <ScalarProperty Name="CVLAN_KHACH_HANGJoin" ColumnName="CVLAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_LOAIDICHVU_KHACH_HANGJoin" ColumnName="ID_LOAIDICHVU_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_NHOMKHACHHANG_KHACH_HANGJoin" ColumnName="ID_NHOMKHACHHANG_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_TRANGTHAI_KHACH_HANGJoin" ColumnName="ID_TRANGTHAI_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_VUNGKETNOI_KHACH_HANGJoin" ColumnName="ID_VUNGKETNOI_KHACH_HANGJoin" />
+          <ScalarProperty Name="IPGATEWAY_KHACH_HANGJoin" ColumnName="IPGATEWAY_KHACH_HANGJoin" />
+          <ScalarProperty Name="IPLAN_KHACH_HANGJoin" ColumnName="IPLAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="IPWAN_KHACH_HANGJoin" ColumnName="IPWAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="SVLAN_KHACH_HANGJoin" ColumnName="SVLAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="TEN_KHACHHANG_KHACH_HANGJoin" ColumnName="TEN_KHACHHANG_KHACH_HANGJoin" />
+          <ScalarProperty Name="THOIGIAN_CUNGCAP_KHACH_HANGJoin" ColumnName="THOIGIAN_CUNGCAP_KHACH_HANGJoin" />
+          <ScalarProperty Name="TEN_THIETBI_THIET_BIJoin" ColumnName="TEN_THIETBI_THIET_BIJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_KHACHHANG_THIETBI_Insert" FunctionName="dbQLTSLModel.Store.SP_KHACHHANG_THIETBI_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_KHACHHANG_THIETBI_Update" FunctionName="dbQLTSLModel.Store.SP_KHACHHANG_THIETBI_Update" />
+    <FunctionImportMapping FunctionImportName="SP_LOAI_DICHVU_Delete" FunctionName="dbQLTSLModel.Store.SP_LOAI_DICHVU_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_LOAI_DICHVU_GetAll" FunctionName="dbQLTSLModel.Store.SP_LOAI_DICHVU_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_LOAI_DICHVU_GetAll_Result">
+          <ScalarProperty Name="ID_LOAI_DICHVU" ColumnName="ID_LOAI_DICHVU" />
+          <ScalarProperty Name="TEN_LOAI_DICHVU" ColumnName="TEN_LOAI_DICHVU" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_LOAI_DICHVU_GetByID_LOAI_DICHVU" FunctionName="dbQLTSLModel.Store.SP_LOAI_DICHVU_GetByID_LOAI_DICHVU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_LOAI_DICHVU_GetByID_LOAI_DICHVU_Result">
+          <ScalarProperty Name="ID_LOAI_DICHVU" ColumnName="ID_LOAI_DICHVU" />
+          <ScalarProperty Name="TEN_LOAI_DICHVU" ColumnName="TEN_LOAI_DICHVU" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_LOAI_DICHVU_Insert" FunctionName="dbQLTSLModel.Store.SP_LOAI_DICHVU_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_LOAI_DICHVU_Update" FunctionName="dbQLTSLModel.Store.SP_LOAI_DICHVU_Update" />
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_Delete" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_GetAll" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result">
+          <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
+          <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
+          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_GetByID_NGUOIDUNG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result">
+          <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
+          <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
+          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_Insert" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_Delete" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_GetAll" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetAll_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+          <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
+          <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="PASSWORD_NGUOI_DUNGJoin" ColumnName="PASSWORD_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="SDT_NGUOI_DUNGJoin" ColumnName="SDT_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="USERNAME_NGUOI_DUNGJoin" ColumnName="USERNAME_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_GetByID" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_GetByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetByID_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+          <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
+          <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="PASSWORD_NGUOI_DUNGJoin" ColumnName="PASSWORD_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="SDT_NGUOI_DUNGJoin" ColumnName="SDT_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="USERNAME_NGUOI_DUNGJoin" ColumnName="USERNAME_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_Insert" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_Update" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_Update" />
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_Update" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_Update" />
+    <FunctionImportMapping FunctionImportName="SP_NHOM_KHACH_HANG_Delete" FunctionName="dbQLTSLModel.Store.SP_NHOM_KHACH_HANG_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_NHOM_KHACH_HANG_GetAll" FunctionName="dbQLTSLModel.Store.SP_NHOM_KHACH_HANG_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NHOM_KHACH_HANG_GetAll_Result">
+          <ScalarProperty Name="ID_NHOMKHACHHANG" ColumnName="ID_NHOMKHACHHANG" />
+          <ScalarProperty Name="TEN_NHOMKHACHHANG" ColumnName="TEN_NHOMKHACHHANG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_NHOM_KHACH_HANG_GetByID_NHOMKHACHHANG" FunctionName="dbQLTSLModel.Store.SP_NHOM_KHACH_HANG_GetByID_NHOMKHACHHANG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NHOM_KHACH_HANG_GetByID_NHOMKHACHHANG_Result">
+          <ScalarProperty Name="ID_NHOMKHACHHANG" ColumnName="ID_NHOMKHACHHANG" />
+          <ScalarProperty Name="TEN_NHOMKHACHHANG" ColumnName="TEN_NHOMKHACHHANG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_NHOM_KHACH_HANG_Insert" FunctionName="dbQLTSLModel.Store.SP_NHOM_KHACH_HANG_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_NHOM_KHACH_HANG_Update" FunctionName="dbQLTSLModel.Store.SP_NHOM_KHACH_HANG_Update" />
+    <FunctionImportMapping FunctionImportName="SP_QUYEN_Delete" FunctionName="dbQLTSLModel.Store.SP_QUYEN_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_QUYEN_GetAll" FunctionName="dbQLTSLModel.Store.SP_QUYEN_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_QUYEN_GetAll_Result">
+          <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
+          <ScalarProperty Name="TEN_QUYEN" ColumnName="TEN_QUYEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_QUYEN_GetByID_QUYEN" FunctionName="dbQLTSLModel.Store.SP_QUYEN_GetByID_QUYEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_QUYEN_GetByID_QUYEN_Result">
+          <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
+          <ScalarProperty Name="TEN_QUYEN" ColumnName="TEN_QUYEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_QUYEN_Insert" FunctionName="dbQLTSLModel.Store.SP_QUYEN_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_QUYEN_Update" FunctionName="dbQLTSLModel.Store.SP_QUYEN_Update" />
+    <FunctionImportMapping FunctionImportName="SP_THIET_BI_Delete" FunctionName="dbQLTSLModel.Store.SP_THIET_BI_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_THIET_BI_GetAll" FunctionName="dbQLTSLModel.Store.SP_THIET_BI_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_THIET_BI_GetAll_Result">
+          <ScalarProperty Name="ID_THIETBI" ColumnName="ID_THIETBI" />
+          <ScalarProperty Name="TEN_THIETBI" ColumnName="TEN_THIETBI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_THIET_BI_GetByID_THIETBI" FunctionName="dbQLTSLModel.Store.SP_THIET_BI_GetByID_THIETBI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_THIET_BI_GetByID_THIETBI_Result">
+          <ScalarProperty Name="ID_THIETBI" ColumnName="ID_THIETBI" />
+          <ScalarProperty Name="TEN_THIETBI" ColumnName="TEN_THIETBI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_THIET_BI_Insert" FunctionName="dbQLTSLModel.Store.SP_THIET_BI_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_THIET_BI_Update" FunctionName="dbQLTSLModel.Store.SP_THIET_BI_Update" />
+    <FunctionImportMapping FunctionImportName="SP_TRANG_THAI_Delete" FunctionName="dbQLTSLModel.Store.SP_TRANG_THAI_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_TRANG_THAI_GetAll" FunctionName="dbQLTSLModel.Store.SP_TRANG_THAI_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_TRANG_THAI_GetAll_Result">
+          <ScalarProperty Name="ID_TRANGTHAI" ColumnName="ID_TRANGTHAI" />
+          <ScalarProperty Name="TEN_TRANGTHAI" ColumnName="TEN_TRANGTHAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_TRANG_THAI_GetByID_TRANGTHAI" FunctionName="dbQLTSLModel.Store.SP_TRANG_THAI_GetByID_TRANGTHAI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_TRANG_THAI_GetByID_TRANGTHAI_Result">
+          <ScalarProperty Name="ID_TRANGTHAI" ColumnName="ID_TRANGTHAI" />
+          <ScalarProperty Name="TEN_TRANGTHAI" ColumnName="TEN_TRANGTHAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_TRANG_THAI_Insert" FunctionName="dbQLTSLModel.Store.SP_TRANG_THAI_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_TRANG_THAI_Update" FunctionName="dbQLTSLModel.Store.SP_TRANG_THAI_Update" />
+    <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Delete" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_GetAll" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_VUNGKETNOI_GetAll_Result">
+          <ScalarProperty Name="ID_VUNGKETNOI" ColumnName="ID_VUNGKETNOI" />
+          <ScalarProperty Name="TEN_VUNGKETNOI" ColumnName="TEN_VUNGKETNOI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_GetByID_VUNGKETNOI" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_GetByID_VUNGKETNOI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_VUNGKETNOI_GetByID_VUNGKETNOI_Result">
+          <ScalarProperty Name="ID_VUNGKETNOI" ColumnName="ID_VUNGKETNOI" />
+          <ScalarProperty Name="TEN_VUNGKETNOI" ColumnName="TEN_VUNGKETNOI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Insert" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Update" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Update" />
+  </EntityContainerMapping>
+</Mapping>

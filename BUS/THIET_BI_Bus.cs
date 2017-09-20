@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 namespace BUS
 {
-    public class THIET_BI_BCL
+    public class THIET_BI_Bus
     {
         
 public List<THIET_BI_Object> GetAll()

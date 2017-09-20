@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 namespace BUS
 {
-    public class QUYEN_BCL
+    public class QUYEN_Bus
     {
         
 public List<QUYEN_Object> GetAll()

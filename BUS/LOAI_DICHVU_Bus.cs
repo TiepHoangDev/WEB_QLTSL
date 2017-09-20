@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 namespace BUS
 {
-    public class LOAI_DICHVU_BCL
+    public class LOAI_DICHVU_Bus
     {
         
 public List<LOAI_DICHVU_Object> GetAll()

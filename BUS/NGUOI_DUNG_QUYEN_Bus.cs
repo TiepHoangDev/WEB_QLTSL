@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 namespace BUS
 {
-    public class NGUOI_DUNG_QUYEN_BCL
+    public class NGUOI_DUNG_QUYEN_Bus
     {
         
 public List<NGUOI_DUNG_QUYEN_Object> GetAll()

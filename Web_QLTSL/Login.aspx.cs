@@ -13,5 +13,17 @@ namespace Web_QLTSL
         {
 
         }
+
+        public void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (new Core.Login().CheckLogin(txtUsername.Value, txtPassword.Value))
+            {
+                Response.Redirect("Home");
+            }
+            else
+            {
+                lblResult.InnerText = "Sai tên đăng nhập hoặc mật khẩu";
+            }
+        }
     }
 }

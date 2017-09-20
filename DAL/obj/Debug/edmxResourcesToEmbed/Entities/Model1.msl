@@ -292,5 +292,17 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Insert" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Insert" />
     <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Update" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Update" />
+    <FunctionImportMapping FunctionImportName="SP_CheckLogin" FunctionName="dbQLTSLModel.Store.SP_CheckLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_CheckLogin_Result">
+          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+          <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

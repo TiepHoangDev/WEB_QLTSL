@@ -666,5 +666,18 @@ namespace DAL.Entities
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_VUNGKETNOI_Update", iD_VUNGKETNOIParameter, tEN_VUNGKETNOIParameter);
         }
+    
+        public virtual ObjectResult<SP_CheckLogin_Result> SP_CheckLogin(string uSERNAME, string pASSWORD)
+        {
+            var uSERNAMEParameter = uSERNAME != null ?
+                new ObjectParameter("USERNAME", uSERNAME) :
+                new ObjectParameter("USERNAME", typeof(string));
+    
+            var pASSWORDParameter = pASSWORD != null ?
+                new ObjectParameter("PASSWORD", pASSWORD) :
+                new ObjectParameter("PASSWORD", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_CheckLogin_Result>("SP_CheckLogin", uSERNAMEParameter, pASSWORDParameter);
+        }
     }
 }

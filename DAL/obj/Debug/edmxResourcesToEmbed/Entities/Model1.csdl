@@ -191,6 +191,10 @@
       <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
       <Parameter Name="TEN_VUNGKETNOI" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="SP_CheckLogin" ReturnType="Collection(dbQLTSLModel.SP_CheckLogin_Result)">
+      <Parameter Name="USERNAME" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="SP_DON_VI_GetAll_Result">
     <Property Type="Int32" Name="ID_DONVI" Nullable="false" />
@@ -361,5 +365,13 @@
   <ComplexType Name="SP_VUNGKETNOI_GetByID_VUNGKETNOI_Result">
     <Property Type="Int32" Name="ID_VUNGKETNOI" Nullable="false" />
     <Property Type="String" Name="TEN_VUNGKETNOI" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_CheckLogin_Result">
+    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
+    <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SDT" Nullable="true" />
   </ComplexType>
 </Schema>

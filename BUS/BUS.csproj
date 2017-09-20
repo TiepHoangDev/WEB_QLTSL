@@ -40,18 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DON_VI_BCL.cs" />
-    <Compile Include="KHACHHANG_THIETBI_BCL.cs" />
-    <Compile Include="KHACH_HANG_BCL.cs" />
-    <Compile Include="LOAI_DICHVU_BCL.cs" />
-    <Compile Include="NGUOI_DUNG_BCL.cs" />
-    <Compile Include="NGUOI_DUNG_QUYEN_BCL.cs" />
-    <Compile Include="NHOM_KHACH_HANG_BCL.cs" />
+    <Compile Include="DON_VI_Bus.cs" />
+    <Compile Include="KHACHHANG_THIETBI_Bus.cs" />
+    <Compile Include="KHACH_HANG_Bus.cs" />
+    <Compile Include="LOAI_DICHVU_Bus.cs" />
+    <Compile Include="NGUOI_DUNG_Bus.cs" />
+    <Compile Include="NGUOI_DUNG_QUYEN_Bus.cs" />
+    <Compile Include="NHOM_KHACH_HANG_Bus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QUYEN_BCL.cs" />
-    <Compile Include="THIET_BI_BCL.cs" />
-    <Compile Include="TRANG_THAI_BCL.cs" />
-    <Compile Include="VUNGKETNOI_BCL.cs" />
+    <Compile Include="QUYEN_Bus.cs" />
+    <Compile Include="THIET_BI_Bus.cs" />
+    <Compile Include="TRANG_THAI_Bus.cs" />
+    <Compile Include="VUNGKETNOI_Bus.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

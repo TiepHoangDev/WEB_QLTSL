@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 namespace BUS
 {
-    public class TRANG_THAI_BCL
+    public class TRANG_THAI_Bus
     {
         
 public List<TRANG_THAI_Object> GetAll()

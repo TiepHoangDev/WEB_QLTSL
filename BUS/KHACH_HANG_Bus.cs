@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 namespace BUS
 {
-    public class KHACH_HANG_BCL
+    public class KHACH_HANG_Bus
     {
         
 public List<KHACH_HANG_Object> GetAll()

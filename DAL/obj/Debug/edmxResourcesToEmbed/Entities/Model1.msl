@@ -138,11 +138,10 @@
     <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_Delete" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_Delete" />
     <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_GetAll" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_GetAll">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result">
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result1">
           <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
           <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
           <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
-          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
           <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
@@ -151,11 +150,10 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_GetByID_NGUOIDUNG">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result">
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1">
           <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
           <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
           <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
-          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
           <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
@@ -172,7 +170,6 @@
           <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
           <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
           <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
-          <ScalarProperty Name="PASSWORD_NGUOI_DUNGJoin" ColumnName="PASSWORD_NGUOI_DUNGJoin" />
           <ScalarProperty Name="SDT_NGUOI_DUNGJoin" ColumnName="SDT_NGUOI_DUNGJoin" />
           <ScalarProperty Name="USERNAME_NGUOI_DUNGJoin" ColumnName="USERNAME_NGUOI_DUNGJoin" />
           <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
@@ -298,9 +295,22 @@
           <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
           <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
-          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
           <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+          <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
+          <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
+          <ScalarProperty Name="ID_QUYENJoin" ColumnName="ID_QUYENJoin" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

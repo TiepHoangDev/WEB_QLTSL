@@ -113,7 +113,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Page\" />
+    <Folder Include="Page\Log-he-thong\" />
+    <Folder Include="Page\nhom-quyen\" />
+    <Folder Include="Page\tai-khoan\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\assets\css\ace-ie.min.css" />
@@ -151,6 +153,7 @@
     <Content Include="Content\assets\images\avatars\avatar5.png" />
     <Content Include="Content\assets\images\avatars\profile-pic.jpg" />
     <Content Include="Content\assets\images\avatars\user.jpg" />
+    <Content Include="Content\assets\images\avatars\user.png" />
     <Content Include="Content\assets\images\bootstrap-colorpicker\alpha-horizontal.png" />
     <Content Include="Content\assets\images\bootstrap-colorpicker\alpha.png" />
     <Content Include="Content\assets\images\bootstrap-colorpicker\hue-horizontal.png" />
@@ -262,6 +265,9 @@
     <Content Include="Content\assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Page\khachhang-thietbi\Delete.aspx" />
+    <Content Include="Page\khachhang-thietbi\Edit.aspx" />
+    <Content Include="Page\khachhang-thietbi\Default.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -312,6 +318,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Core\Login.cs" />
+    <Compile Include="Core\Permisstion.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -328,6 +335,27 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\khachhang-thietbi\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\khachhang-thietbi\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\khachhang-thietbi\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\khachhang-thietbi\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\khachhang-thietbi\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\khachhang-thietbi\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

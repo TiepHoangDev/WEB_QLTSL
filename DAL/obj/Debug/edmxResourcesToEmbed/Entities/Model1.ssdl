@@ -104,6 +104,9 @@
     <Parameter Name="ID" Type="int" Mode="In" />
   </Function>
   <Function Name="SP_NGUOI_DUNG_QUYEN_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_NGUOIDUNG" Type="int" Mode="In" />
+  </Function>
   <Function Name="SP_NGUOI_DUNG_QUYEN_GetByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID" Type="int" Mode="In" />
   </Function>

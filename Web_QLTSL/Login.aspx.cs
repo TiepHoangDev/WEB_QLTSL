@@ -11,14 +11,17 @@ namespace Web_QLTSL
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.QueryString[""] != null)
+            {
+                new Core.Login().Logout();
+            }
         }
 
         public void btnLogin_Click(object sender, EventArgs e)
         {
             if (new Core.Login().CheckLogin(txtUsername.Value, txtPassword.Value))
             {
-                Response.Redirect("Home");
+                Response.Redirect("/Page/khachhang-thietbi");
             }
             else
             {

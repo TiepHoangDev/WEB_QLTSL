@@ -321,18 +321,18 @@ namespace DAL.Entities
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_NGUOI_DUNG_Delete", iD_NGUOIDUNGParameter);
         }
     
-        public virtual ObjectResult<SP_NGUOI_DUNG_GetAll_Result> SP_NGUOI_DUNG_GetAll()
+        public virtual ObjectResult<SP_NGUOI_DUNG_GetAll_Result1> SP_NGUOI_DUNG_GetAll()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_NGUOI_DUNG_GetAll_Result>("SP_NGUOI_DUNG_GetAll");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_NGUOI_DUNG_GetAll_Result1>("SP_NGUOI_DUNG_GetAll");
         }
     
-        public virtual ObjectResult<SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result> SP_NGUOI_DUNG_GetByID_NGUOIDUNG(Nullable<int> iD_NGUOIDUNG)
+        public virtual ObjectResult<SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1> SP_NGUOI_DUNG_GetByID_NGUOIDUNG(Nullable<int> iD_NGUOIDUNG)
         {
             var iD_NGUOIDUNGParameter = iD_NGUOIDUNG.HasValue ?
                 new ObjectParameter("ID_NGUOIDUNG", iD_NGUOIDUNG) :
                 new ObjectParameter("ID_NGUOIDUNG", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result>("SP_NGUOI_DUNG_GetByID_NGUOIDUNG", iD_NGUOIDUNGParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1>("SP_NGUOI_DUNG_GetByID_NGUOIDUNG", iD_NGUOIDUNGParameter);
         }
     
         public virtual int SP_NGUOI_DUNG_Insert(string hO_TEN, Nullable<int> iD_DONVI, string pASSWORD, Nullable<int> sDT, string uSERNAME)
@@ -678,6 +678,15 @@ namespace DAL.Entities
                 new ObjectParameter("PASSWORD", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_CheckLogin_Result>("SP_CheckLogin", uSERNAMEParameter, pASSWORDParameter);
+        }
+    
+        public virtual ObjectResult<SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1> SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG(Nullable<int> iD_NGUOIDUNG)
+        {
+            var iD_NGUOIDUNGParameter = iD_NGUOIDUNG.HasValue ?
+                new ObjectParameter("ID_NGUOIDUNG", iD_NGUOIDUNG) :
+                new ObjectParameter("ID_NGUOIDUNG", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1>("SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG", iD_NGUOIDUNGParameter);
         }
     }
 }

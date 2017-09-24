@@ -109,6 +109,9 @@
           <Parameter Name="ID" Type="int" Mode="In" />
         </Function>
         <Function Name="SP_NGUOI_DUNG_QUYEN_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_NGUOIDUNG" Type="int" Mode="In" />
+        </Function>
         <Function Name="SP_NGUOI_DUNG_QUYEN_GetByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID" Type="int" Mode="In" />
         </Function>
@@ -290,8 +293,8 @@
           <FunctionImport Name="SP_NGUOI_DUNG_Delete">
           <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="SP_NGUOI_DUNG_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result)" />
-          <FunctionImport Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result)">
+          <FunctionImport Name="SP_NGUOI_DUNG_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result1)" />
+          <FunctionImport Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1)">
           <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_NGUOI_DUNG_Insert">
@@ -398,6 +401,9 @@
           <FunctionImport Name="SP_CheckLogin" ReturnType="Collection(dbQLTSLModel.SP_CheckLogin_Result)">
             <Parameter Name="USERNAME" Mode="In" Type="String" />
             <Parameter Name="PASSWORD" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1)">
+          <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SP_DON_VI_GetAll_Result">
@@ -514,7 +520,6 @@
           <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
           <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
-          <Property Type="String" Name="PASSWORD_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="SDT_NGUOI_DUNGJoin" Nullable="true" />
           <Property Type="String" Name="USERNAME_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
@@ -574,9 +579,39 @@
           <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
           <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
           <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="SDT" Nullable="true" />
+          <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
+          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
+          <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
+          <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
+          <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="ID_QUYENJoin" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_NGUOI_DUNG_GetAll_Result1">
+          <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
+          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
+          <Property Type="Int32" Name="SDT" Nullable="true" />
+          <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1">
+          <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
+          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
+          <Property Type="Int32" Name="SDT" Nullable="true" />
+          <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -720,12 +755,11 @@
           <FunctionImportMapping FunctionImportName="SP_LOAI_DICHVU_Update" FunctionName="dbQLTSLModel.Store.SP_LOAI_DICHVU_Update" />
           <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_Delete" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_Delete" />
           <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_GetAll" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_GetAll">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result1">
                 <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
                 <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
                 <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
-                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
                 <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
@@ -733,12 +767,11 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_GetByID_NGUOIDUNG">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1">
                 <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
                 <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
                 <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
-                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
                 <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
@@ -755,7 +788,6 @@
                 <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
                 <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
                 <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
-                <ScalarProperty Name="PASSWORD_NGUOI_DUNGJoin" ColumnName="PASSWORD_NGUOI_DUNGJoin" />
                 <ScalarProperty Name="SDT_NGUOI_DUNGJoin" ColumnName="SDT_NGUOI_DUNGJoin" />
                 <ScalarProperty Name="USERNAME_NGUOI_DUNGJoin" ColumnName="USERNAME_NGUOI_DUNGJoin" />
                 <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
@@ -881,9 +913,22 @@
                 <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
                 <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
                 <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
-                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
                 <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+                <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
+                <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
+                <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
+                <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
+                <ScalarProperty Name="ID_QUYENJoin" ColumnName="ID_QUYENJoin" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

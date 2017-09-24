@@ -30,7 +30,6 @@ namespace DAL
                 obj.HO_TEN = item.HO_TEN;
                 obj.ID_DONVI = item.ID_DONVI;
                 obj.ID_NGUOIDUNG = item.ID_NGUOIDUNG;
-                obj.PASSWORD = item.PASSWORD;
                 obj.SDT = item.SDT;
                 obj.USERNAME = item.USERNAME;
 
@@ -71,7 +70,6 @@ namespace DAL
                 obj.HO_TEN = item.HO_TEN;
                 obj.ID_DONVI = item.ID_DONVI;
                 obj.ID_NGUOIDUNG = item.ID_NGUOIDUNG;
-                obj.PASSWORD = item.PASSWORD;
                 obj.SDT = item.SDT;
                 obj.USERNAME = item.USERNAME;
                 obj.DON_VI_ObjectJoin = new DON_VI_Object()
@@ -130,7 +128,7 @@ namespace DAL
         }
 
         /// <summary>
-        /// Check login người dùng bằng username và password, nếu tồn tại thì trả về người dùn, ngược lại trả về null.
+        /// Check login người dùng bằng username và password, nếu tồn tại thì trả về người dùng, ngược lại trả về null.
         /// </summary>
         /// <param name="Username"></param>
         /// <param name="Password"></param>
@@ -145,7 +143,12 @@ namespace DAL
                     SDT = item.SDT,
                     ID_NGUOIDUNG = item.ID_NGUOIDUNG,
                     ID_DONVI = item.ID_DONVI,
-                    HO_TEN = item.HO_TEN
+                    HO_TEN = item.HO_TEN,
+                    DON_VI_ObjectJoin = new DON_VI_Object()
+                    {
+                        ID_DONVI = (System.Int32)item.ID_DONVI,
+                        TEN_DONVI = item.TEN_DONVI_DON_VIJoin
+                    }
                 };
             }
             return null;

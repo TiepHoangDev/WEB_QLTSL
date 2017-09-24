@@ -697,5 +697,22 @@ namespace DAL.Entities
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_VUNGKETNOI_Update", iD_VUNGKETNOIParameter, tEN_VUNGKETNOIParameter);
         }
+    
+        public virtual int SP_NGUOI_DUNG_ResetPassword(Nullable<int> iD_Admin, string rePassword, Nullable<int> iD_NGUOIDUNG)
+        {
+            var iD_AdminParameter = iD_Admin.HasValue ?
+                new ObjectParameter("ID_Admin", iD_Admin) :
+                new ObjectParameter("ID_Admin", typeof(int));
+    
+            var rePasswordParameter = rePassword != null ?
+                new ObjectParameter("RePassword", rePassword) :
+                new ObjectParameter("RePassword", typeof(string));
+    
+            var iD_NGUOIDUNGParameter = iD_NGUOIDUNG.HasValue ?
+                new ObjectParameter("ID_NGUOIDUNG", iD_NGUOIDUNG) :
+                new ObjectParameter("ID_NGUOIDUNG", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_NGUOI_DUNG_ResetPassword", iD_AdminParameter, rePasswordParameter, iD_NGUOIDUNGParameter);
+        }
     }
 }

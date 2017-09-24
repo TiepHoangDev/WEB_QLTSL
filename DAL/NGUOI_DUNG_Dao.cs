@@ -153,5 +153,10 @@ namespace DAL
             }
             return null;
         }
+
+        public bool ResetPassword(int ID_admin, string repass, int id_user)
+        {
+            return new dbQLTSLEntities().SP_NGUOI_DUNG_ResetPassword(ID_admin, repass, id_user) > 0;
+        }
     }
 }

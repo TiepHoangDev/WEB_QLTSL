@@ -36,6 +36,9 @@ namespace Web_QLTSL
         /// <returns></returns>
         public bool CheckQuyen(Core.eQUYEN quyen)
         {
+            //kiểm tra đăng nhập người dùng, nếu chưa đăng nhập thì out ra Login
+            if (new Core.Login().GetNguoiDung() == null) Response.Redirect("/login.aspx?=out");
+
             //lấy tất cả quyền mà người dùng có
             var lstQuyen = new Core.Login().GetAllQuyen();
 

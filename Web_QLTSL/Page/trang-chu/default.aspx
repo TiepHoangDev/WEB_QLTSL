@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="Web_QLTSL.Page.trang_chu.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Web_QLTSL.Page.trang_chu.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="style" runat="server">
     <script src="/Content/assets/js/jquery.dataTables.min.js"></script>
@@ -50,6 +50,7 @@
             </asp:Repeater>
         </tbody>
     </table>
+    <asp:Button Text="Xuất Excel" runat="server" ID="btnExcel" OnClick="btnExcel_Click" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
     <script>

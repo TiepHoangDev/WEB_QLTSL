@@ -327,5 +327,6 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Insert" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Insert" />
     <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Update" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Update" />
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_ResetPassword" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_ResetPassword" />
   </EntityContainerMapping>
 </Mapping>

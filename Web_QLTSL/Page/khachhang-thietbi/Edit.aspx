@@ -9,56 +9,23 @@
         </h2>
     </div>
     <div class="box-body">
-
-        <asp:HiddenField runat="server" ID="txtIDKhachHang" />
         <div class="form-group">
-            <label>Họ tên khách hàng</label>
-            <input type="text" required class="form-control" id="txtTenKhachHang" placeholder="Họ tên khách hàng" runat="server">
-        </div>
-        <div class="form-group">
-            <label>Thời gian cung cấp</label>
-            <input type="date" required class="form-control" id="date" placeholder="12/12/2017" runat="server">
-        </div>
-        <div class="form-group">
-            <label>IPGATEWAY</label>
-            <input type="text" required class="form-control" id="IPGATEWAY" placeholder="IPGATEWAY" runat="server">
-        </div>
-        <div class="form-group">
-            <label>IPLAN</label>
-            <input type="text" required class="form-control" id="IPLAN" placeholder="IPLAN" runat="server">
-        </div>
-        <div class="form-group">
-            <label>IPWAN</label>
-            <input type="text" required class="form-control" id="IPWAN" placeholder="IPWAN" runat="server">
-        </div>
-        <div class="form-group">
-            <label>SVLAN</label>
-            <input type="number" min="0" required class="form-control" id="SVLAN" placeholder="SVLAN" runat="server">
-        </div>
-        <div class="form-group">
-            <label>CVLAN</label>
-            <input type="number" min="0" required class="form-control" id="CVLAN" placeholder="CVLAN" runat="server">
-        </div>
-
-        <div class="form-group">
-            <label>Loại dịch vụ</label>
+            <label>Khách hàng</label>
             <asp:DropDownList ID="dropKhachHang" CssClass="form-control" runat="server"></asp:DropDownList>
             <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="dropKhachHang" InitialValue="-1" ErrorMessage="Vui lòng chọn một giá trị"> </asp:RequiredFieldValidator>
         </div>
         <div class="form-group">
-            <label>Nhóm khách hàng</label>
-            <asp:DropDownList CssClass="form-control" ID="dropNhomKhachHang" runat="server"></asp:DropDownList>
-            <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="dropNhomKhachHang" InitialValue="-1" ErrorMessage="Vui lòng chọn một giá trị"> </asp:RequiredFieldValidator>
+            <label>Thiết bị</label>
+            <asp:DropDownList ID="dropThietbi" CssClass="form-control" runat="server"></asp:DropDownList>
+            <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="dropThietbi" InitialValue="-1" ErrorMessage="Vui lòng chọn một giá trị"> </asp:RequiredFieldValidator>
         </div>
         <div class="form-group">
-            <label>Vùng kết nối</label>
-            <asp:DropDownList CssClass="form-control" ID="dropVungKetNoi" runat="server"></asp:DropDownList>
-            <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="dropVungKetNoi" InitialValue="-1" ErrorMessage="Vui lòng chọn một giá trị"> </asp:RequiredFieldValidator>
+            <label>Tốc độ</label>
+            <input type="text" required min="0" class="form-control" id="txtTocDo" placeholder="Tốc độ" runat="server">
         </div>
         <div class="form-group">
-            <label>Trạng thái</label>
-            <asp:DropDownList CssClass="form-control" ID="dropTrangThai" runat="server"></asp:DropDownList>
-            <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="dropTrangThai" InitialValue="-1" ErrorMessage="Vui lòng chọn một giá trị"> </asp:RequiredFieldValidator>
+            <label>Cổng</label>
+            <input type="text" required min="0" class="form-control" id="txtCong" placeholder="Cổng" runat="server">
         </div>
     </div>
     <div class="box-footer">

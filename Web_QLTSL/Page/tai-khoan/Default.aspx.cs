@@ -15,14 +15,20 @@ namespace Web_QLTSL.Page.tai_khoan
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var acc = new Core.Login().GetNguoiDung();
             //gán datasource cho repeater
-            repeater.DataSource = new BUS.NGUOI_DUNG_Bus().GetAll();
+            repeater.DataSource = new BUS.NGUOI_DUNG_Bus().GetAll().Where(q => q.ID_NGUOIDUNG != acc.ID_NGUOIDUNG);
 
             //kiểm tra quyền THEM_SUA_XOA của người cùng
             allowThem_Sua_Xoa = CheckQuyen(Core.eQUYEN.THEM_SUA_XOA);
 
             //load data cho form
             DataBind();
+        }
+
+        protected void btnRset_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

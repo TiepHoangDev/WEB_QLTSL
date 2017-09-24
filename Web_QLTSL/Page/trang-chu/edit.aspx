@@ -9,23 +9,55 @@
         </h2>
     </div>
     <div class="box-body">
-        <asp:HiddenField runat="server" ID="txtPASSWORD" />
+        <asp:HiddenField runat="server" ID="txtIDKhachHang" />
         <div class="form-group">
-            <label>Họ và tên</label>
-            <input id="txtHoTen" type="text" required class="form-control" placeholder="Họ và tên" runat="server">
+            <label>Họ tên khách hàng</label>
+            <input type="text" required class="form-control" id="txtTenKhachHang" placeholder="Họ tên khách hàng" runat="server">
         </div>
         <div class="form-group">
-            <label>Tên đăng nhập</label>
-            <input id="txtUsername" type="text" required class="form-control" placeholder="Tên đăng nhập" runat="server">
+            <label>Thời gian cung cấp</label>
+            <input type="date" required class="form-control" id="date" placeholder="12/12/2017" runat="server">
         </div>
         <div class="form-group">
-            <label>Số điện thoại</label>
-            <input id="txtSDT" type="number" required min="0" class="form-control" placeholder="Số điện thoại" runat="server">
+            <label>IPGATEWAY</label>
+            <input type="text" required class="form-control" id="IPGATEWAY" placeholder="IPGATEWAY" runat="server">
         </div>
         <div class="form-group">
-            <label>Đơn vị</label>
-            <asp:DropDownList CssClass="form-control" ID="dropDonVi" runat="server"></asp:DropDownList>
-            <asp:RequiredFieldValidator ControlToValidate="dropDonVi" CssClass="text-danger" runat="server" InitialValue="-1" ErrorMessage="Vui lòng chọn một giá trị"> </asp:RequiredFieldValidator>
+            <label>IPLAN</label>
+            <input type="text" required class="form-control" id="IPLAN" placeholder="IPLAN" runat="server">
+        </div>
+        <div class="form-group">
+            <label>IPWAN</label>
+            <input type="text" required class="form-control" id="IPWAN" placeholder="IPWAN" runat="server">
+        </div>
+        <div class="form-group">
+            <label>SVLAN</label>
+            <input type="number" min="0" required class="form-control" id="SVLAN" placeholder="SVLAN" runat="server">
+        </div>
+        <div class="form-group">
+            <label>CVLAN</label>
+            <input type="number" min="0" required class="form-control" id="CVLAN" placeholder="CVLAN" runat="server">
+        </div>
+
+        <div class="form-group">
+            <label>Loại dịch vụ</label>
+            <asp:DropDownList ID="dropKhachHang" CssClass="form-control" runat="server"></asp:DropDownList>
+            <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="dropKhachHang" InitialValue="-1" ErrorMessage="Vui lòng chọn một giá trị"> </asp:RequiredFieldValidator>
+        </div>
+        <div class="form-group">
+            <label>Nhóm khách hàng</label>
+            <asp:DropDownList CssClass="form-control" ID="dropNhomKhachHang" runat="server"></asp:DropDownList>
+            <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="dropNhomKhachHang" InitialValue="-1" ErrorMessage="Vui lòng chọn một giá trị"> </asp:RequiredFieldValidator>
+        </div>
+        <div class="form-group">
+            <label>Vùng kết nối</label>
+            <asp:DropDownList CssClass="form-control" ID="dropVungKetNoi" runat="server"></asp:DropDownList>
+            <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="dropVungKetNoi" InitialValue="-1" ErrorMessage="Vui lòng chọn một giá trị"> </asp:RequiredFieldValidator>
+        </div>
+        <div class="form-group">
+            <label>Trạng thái</label>
+            <asp:DropDownList CssClass="form-control" ID="dropTrangThai" runat="server"></asp:DropDownList>
+            <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="dropTrangThai" InitialValue="-1" ErrorMessage="Vui lòng chọn một giá trị"> </asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="box-footer">

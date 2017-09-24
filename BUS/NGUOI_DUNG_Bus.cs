@@ -41,5 +41,10 @@ namespace BUS
         {
             return new NGUOI_DUNG_Dao().CheckLogin(Username, Password);
         }
+
+        public bool ResetPassword(int ID_admin, string repass, int id_user)
+        {
+            return new NGUOI_DUNG_Dao().ResetPassword(ID_admin, repass, id_user);
+        }
     }
 }

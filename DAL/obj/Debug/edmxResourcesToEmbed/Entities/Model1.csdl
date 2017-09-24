@@ -201,6 +201,11 @@
       <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
       <Parameter Name="TEN_VUNGKETNOI" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="SP_NGUOI_DUNG_ResetPassword">
+      <Parameter Name="ID_Admin" Mode="In" Type="Int32" />
+      <Parameter Name="RePassword" Mode="In" Type="String" />
+      <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
     <Property Type="Int32" Name="ID" Nullable="false" />

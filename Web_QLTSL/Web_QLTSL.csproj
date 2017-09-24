@@ -274,7 +274,8 @@
     <Content Include="Page\tai-khoan\default.aspx" />
     <Content Include="Page\tai-khoan\delete.aspx" />
     <Content Include="Page\tai-khoan\edit.aspx" />
-    <Content Include="Page\trang-chu\default.aspx" />
+    <Content Include="Page\tai-khoan\reset.aspx" />
+    <Content Include="Page\trang-chu\Default.aspx" />
     <Content Include="Page\trang-chu\delete.aspx" />
     <Content Include="Page\trang-chu\edit.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -426,12 +427,19 @@
     <Compile Include="Page\tai-khoan\edit.aspx.designer.cs">
       <DependentUpon>edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Page\trang-chu\Default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="Page\tai-khoan\reset.aspx.cs">
+      <DependentUpon>reset.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Page\trang-chu\default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="Page\tai-khoan\reset.aspx.designer.cs">
+      <DependentUpon>reset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\trang-chu\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\trang-chu\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\trang-chu\delete.aspx.cs">
       <DependentUpon>delete.aspx</DependentUpon>

@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace Web_QLTSL.Page.phan_quyen
 {
-    public partial class Delete : System.Web.UI.Page
+    public partial class Delete : BasePage
     {
         int id;
         protected void Page_Load(object sender, EventArgs e)

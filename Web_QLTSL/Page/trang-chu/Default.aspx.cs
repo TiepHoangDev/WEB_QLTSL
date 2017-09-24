@@ -24,5 +24,23 @@ namespace Web_QLTSL.Page.trang_chu
             //load data cho form
             DataBind();
         }
+
+        protected void btnExcel_Click(object sender, EventArgs e)
+        {
+            Response.Clear();
+            Response.Buffer = true;
+            Response.ContentType = "application/vnd.ms-excel";
+            Response.AddHeader("content-disposition", "attachment;filename=MyFiles.xls");
+            Response.Charset = "";
+            this.EnableViewState = false;
+
+            System.IO.StringWriter sw = new System.IO.StringWriter();
+            System.Web.UI.HtmlTextWriter htw = new System.Web.UI.HtmlTextWriter(sw);
+
+            repeater.RenderControl(htw);
+
+            Response.Write(sw.ToString());
+            Response.End();
+        }
     }
 }

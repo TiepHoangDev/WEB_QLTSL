@@ -122,6 +122,11 @@
     <Parameter Name="ID_NGUOIDUNG" Type="int" Mode="In" />
     <Parameter Name="ID_QUYEN" Type="int" Mode="In" />
   </Function>
+  <Function Name="SP_NGUOI_DUNG_ResetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Admin" Type="int" Mode="In" />
+    <Parameter Name="RePassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="ID_NGUOIDUNG" Type="int" Mode="In" />
+  </Function>
   <Function Name="SP_NGUOI_DUNG_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="HO_TEN" Type="nvarchar" Mode="In" />
     <Parameter Name="ID_DONVI" Type="int" Mode="In" />

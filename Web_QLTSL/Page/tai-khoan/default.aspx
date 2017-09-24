@@ -29,6 +29,7 @@
                         <td><%#Eval("SDT") %></td>
                         <td>
                             <a visible='<%#allowThem_Sua_Xoa%>' href='<%#Eval("ID_NGUOIDUNG","/page/phan-quyen/edit.aspx?={0}") %>' runat="server" class="btn btn-info">Phân quyền người dùng</a>
+                            <a visible='<%#allowThem_Sua_Xoa%>' href='<%#Eval("ID_NGUOIDUNG","reset.aspx?={0}") %>' runat="server" class="btn btn-info">Reset mật khẩu</a>
                             <a visible='<%#allowThem_Sua_Xoa%>' href='<%#Eval("ID_NGUOIDUNG","edit.aspx?={0}") %>' runat="server" class="btn btn-info">Sửa</a>
                             <a visible='<%#allowThem_Sua_Xoa %>' href='<%#Eval("ID_NGUOIDUNG","delete.aspx?={0}") %>' runat="server" class="btn btn-warning">Xóa</a>
                         </td>

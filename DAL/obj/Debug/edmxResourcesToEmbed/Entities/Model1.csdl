@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="dbQLTSLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="dbQLTSLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="dbQLTSLEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result)">
+      <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_CheckLogin" ReturnType="Collection(dbQLTSLModel.SP_CheckLogin_Result)">
+      <Parameter Name="USERNAME" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="SP_DON_VI_Delete">
       <Parameter Name="ID_DONVI" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -86,8 +93,8 @@
     <FunctionImport Name="SP_NGUOI_DUNG_Delete">
       <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="SP_NGUOI_DUNG_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result1)" />
-    <FunctionImport Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1)">
+    <FunctionImport Name="SP_NGUOI_DUNG_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result)" />
+    <FunctionImport Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result)">
       <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="SP_NGUOI_DUNG_Insert">
@@ -101,6 +108,9 @@
       <Parameter Name="ID" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetAll_Result)" />
+    <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result)">
+      <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+    </FunctionImport>
     <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_GetByID" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetByID_Result)">
       <Parameter Name="ID" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -191,14 +201,25 @@
       <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
       <Parameter Name="TEN_VUNGKETNOI" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="SP_CheckLogin" ReturnType="Collection(dbQLTSLModel.SP_CheckLogin_Result)">
-      <Parameter Name="USERNAME" Mode="In" Type="String" />
-      <Parameter Name="PASSWORD" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1)">
-      <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
-    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
+    <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
+    <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
+    <Property Type="Int32" Name="SDT_NGUOI_DUNGJoin" Nullable="true" />
+    <Property Type="String" Name="USERNAME_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="SP_CheckLogin_Result">
+    <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
+    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
+    <Property Type="Int32" Name="SDT" Nullable="true" />
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
+  </ComplexType>
   <ComplexType Name="SP_DON_VI_GetAll_Result">
     <Property Type="Int32" Name="ID_DONVI" Nullable="false" />
     <Property Type="String" Name="TEN_DONVI" Nullable="true" MaxLength="255" />
@@ -293,7 +314,6 @@
     <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
     <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
     <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
-    <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="50" />
     <Property Type="Int32" Name="SDT" Nullable="true" />
     <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
@@ -302,7 +322,6 @@
     <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
     <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
     <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
-    <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="50" />
     <Property Type="Int32" Name="SDT" Nullable="true" />
     <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
@@ -317,13 +336,21 @@
     <Property Type="String" Name="USERNAME_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
   </ComplexType>
+  <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
+    <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
+    <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
+    <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="ID_QUYENJoin" Nullable="false" />
+  </ComplexType>
   <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetByID_Result">
     <Property Type="Int32" Name="ID" Nullable="false" />
     <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
     <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
     <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
     <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
-    <Property Type="String" Name="PASSWORD_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
     <Property Type="Int32" Name="SDT_NGUOI_DUNGJoin" Nullable="true" />
     <Property Type="String" Name="USERNAME_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
@@ -367,43 +394,5 @@
   <ComplexType Name="SP_VUNGKETNOI_GetByID_VUNGKETNOI_Result">
     <Property Type="Int32" Name="ID_VUNGKETNOI" Nullable="false" />
     <Property Type="String" Name="TEN_VUNGKETNOI" Nullable="true" MaxLength="50" />
-  </ComplexType>
-  <ComplexType Name="SP_CheckLogin_Result">
-    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
-    <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
-    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
-    <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
-    <Property Type="Int32" Name="SDT" Nullable="true" />
-    <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
-  </ComplexType>
-  <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
-    <Property Type="Int32" Name="ID" Nullable="false" />
-    <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
-    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1">
-    <Property Type="Int32" Name="ID" Nullable="false" />
-    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
-    <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
-    <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
-    <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
-    <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
-    <Property Type="Int32" Name="ID_QUYENJoin" Nullable="false" />
-  </ComplexType>
-  <ComplexType Name="SP_NGUOI_DUNG_GetAll_Result1">
-    <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
-    <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
-    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
-    <Property Type="Int32" Name="SDT" Nullable="true" />
-    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
-    <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
-  </ComplexType>
-  <ComplexType Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1">
-    <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
-    <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
-    <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
-    <Property Type="Int32" Name="SDT" Nullable="true" />
-    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
-    <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
   </ComplexType>
 </Schema>

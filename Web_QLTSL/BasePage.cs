@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace Web_QLTSL
 {
@@ -20,8 +21,8 @@ namespace Web_QLTSL
             //kiểm tra null và check quyền
             if (acc == null || CheckQuyen(Core.eQUYEN.XEM) == false)
             {
-                //nếu ko có quyền sẽ chuyển sang trang login
-                Response.Redirect("/Login.aspx");
+                //nếu ko có quyền sẽ chuyển sang trang NotQUYEN
+                Response.Redirect("/NotQUYEN.aspx");
             }
 
             //nếu có quyền sẽ tiếp tục

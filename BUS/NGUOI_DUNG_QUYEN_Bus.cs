@@ -41,5 +41,10 @@ namespace BUS
             return new NGUOI_DUNG_QUYEN_Dao().Update(ob);
         }
 
+
+        public List<NGUOI_DUNG_QUYEN_Object> GetByID_NGUOIDUNG(int id)
+        {
+            return new NGUOI_DUNG_QUYEN_Dao().GetByID_NGUOIDUNG(id);
+        }
     }
 }

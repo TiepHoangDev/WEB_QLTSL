@@ -1,6 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="dbQLTSLModelStoreContainer" CdmEntityContainer="dbQLTSLEntities">
+    <FunctionImportMapping FunctionImportName="NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+          <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
+          <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="SDT_NGUOI_DUNGJoin" ColumnName="SDT_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="USERNAME_NGUOI_DUNGJoin" ColumnName="USERNAME_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CheckLogin" FunctionName="dbQLTSLModel.Store.SP_CheckLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_CheckLogin_Result">
+          <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
+          <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
+          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="SP_DON_VI_Delete" FunctionName="dbQLTSLModel.Store.SP_DON_VI_Delete" />
     <FunctionImportMapping FunctionImportName="SP_DON_VI_GetAll" FunctionName="dbQLTSLModel.Store.SP_DON_VI_GetAll">
       <ResultMapping>
@@ -138,7 +164,7 @@
     <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_Delete" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_Delete" />
     <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_GetAll" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_GetAll">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result1">
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result">
           <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
           <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
           <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
@@ -150,7 +176,7 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_GetByID_NGUOIDUNG">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1">
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result">
           <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
           <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
           <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
@@ -176,6 +202,19 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+          <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
+          <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
+          <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
+          <ScalarProperty Name="ID_QUYENJoin" ColumnName="ID_QUYENJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_GetByID" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_GetByID">
       <ResultMapping>
         <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetByID_Result">
@@ -184,7 +223,6 @@
           <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
           <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
           <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
-          <ScalarProperty Name="PASSWORD_NGUOI_DUNGJoin" ColumnName="PASSWORD_NGUOI_DUNGJoin" />
           <ScalarProperty Name="SDT_NGUOI_DUNGJoin" ColumnName="SDT_NGUOI_DUNGJoin" />
           <ScalarProperty Name="USERNAME_NGUOI_DUNGJoin" ColumnName="USERNAME_NGUOI_DUNGJoin" />
           <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
@@ -289,30 +327,5 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Insert" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Insert" />
     <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Update" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Update" />
-    <FunctionImportMapping FunctionImportName="SP_CheckLogin" FunctionName="dbQLTSLModel.Store.SP_CheckLogin">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_CheckLogin_Result">
-          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
-          <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
-          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
-          <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
-          <ScalarProperty Name="SDT" ColumnName="SDT" />
-          <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
-          <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
-          <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
-          <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
-          <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
-          <ScalarProperty Name="ID_QUYENJoin" ColumnName="ID_QUYENJoin" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

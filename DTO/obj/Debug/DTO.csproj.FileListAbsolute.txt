@@ -3,3 +3,8 @@ C:\Users\LENOVO\Source\Repos\Web_QLTSL\DTO\bin\Debug\DTO.pdb
 C:\Users\LENOVO\Source\Repos\Web_QLTSL\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 C:\Users\LENOVO\Source\Repos\Web_QLTSL\DTO\obj\Debug\DTO.dll
 C:\Users\LENOVO\Source\Repos\Web_QLTSL\DTO\obj\Debug\DTO.pdb
+D:\Project\Web_QLTSL\DTO\bin\Debug\DTO.dll
+D:\Project\Web_QLTSL\DTO\bin\Debug\DTO.pdb
+D:\Project\Web_QLTSL\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\Project\Web_QLTSL\DTO\obj\Debug\DTO.dll
+D:\Project\Web_QLTSL\DTO\obj\Debug\DTO.pdb

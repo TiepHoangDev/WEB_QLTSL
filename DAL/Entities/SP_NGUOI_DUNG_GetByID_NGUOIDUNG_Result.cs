@@ -16,7 +16,6 @@ namespace DAL.Entities
         public string HO_TEN { get; set; }
         public Nullable<int> ID_DONVI { get; set; }
         public int ID_NGUOIDUNG { get; set; }
-        public string PASSWORD { get; set; }
         public Nullable<int> SDT { get; set; }
         public string USERNAME { get; set; }
         public string TEN_DONVI_DON_VIJoin { get; set; }

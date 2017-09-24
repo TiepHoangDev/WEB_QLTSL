@@ -14,7 +14,11 @@ namespace DAL.Entities
     public partial class SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result
     {
         public int ID { get; set; }
-        public Nullable<int> ID_QUYEN { get; set; }
         public Nullable<int> ID_NGUOIDUNG { get; set; }
+        public Nullable<int> ID_QUYEN { get; set; }
+        public string HO_TEN_NGUOI_DUNGJoin { get; set; }
+        public Nullable<int> ID_DONVI_NGUOI_DUNGJoin { get; set; }
+        public string TEN_QUYEN_QUYENJoin { get; set; }
+        public int ID_QUYENJoin { get; set; }
     }
 }

@@ -22,40 +22,112 @@ namespace Web_QLTSL.Page.KhachHang_ThietBi {
         protected global::System.Web.UI.WebControls.Literal ltrAction;
         
         /// <summary>
-        /// txtKhachHang control.
+        /// txtIDKhachHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtKhachHang;
+        protected global::System.Web.UI.WebControls.HiddenField txtIDKhachHang;
         
         /// <summary>
-        /// txtThietBi control.
+        /// txtTenKhachHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtThietBi;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTenKhachHang;
         
         /// <summary>
-        /// txtTocDo control.
+        /// date control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTocDo;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl date;
         
         /// <summary>
-        /// txtCong control.
+        /// IPGATEWAY control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCong;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText IPGATEWAY;
+        
+        /// <summary>
+        /// IPLAN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText IPLAN;
+        
+        /// <summary>
+        /// IPWAN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText IPWAN;
+        
+        /// <summary>
+        /// SVLAN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl SVLAN;
+        
+        /// <summary>
+        /// CVLAN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl CVLAN;
+        
+        /// <summary>
+        /// dropKhachHang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropKhachHang;
+        
+        /// <summary>
+        /// dropNhomKhachHang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropNhomKhachHang;
+        
+        /// <summary>
+        /// dropVungKetNoi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropVungKetNoi;
+        
+        /// <summary>
+        /// dropTrangThai control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropTrangThai;
         
         /// <summary>
         /// btnOk control.

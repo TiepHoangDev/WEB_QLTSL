@@ -18,7 +18,6 @@ namespace DAL.Entities
         public Nullable<int> ID_QUYEN { get; set; }
         public string HO_TEN_NGUOI_DUNGJoin { get; set; }
         public Nullable<int> ID_DONVI_NGUOI_DUNGJoin { get; set; }
-        public string PASSWORD_NGUOI_DUNGJoin { get; set; }
         public Nullable<int> SDT_NGUOI_DUNGJoin { get; set; }
         public string USERNAME_NGUOI_DUNGJoin { get; set; }
         public string TEN_QUYEN_QUYENJoin { get; set; }

@@ -9,3 +9,14 @@ C:\Users\LENOVO\Source\Repos\Web_QLTSL\BUS\bin\Debug\EntityFramework.xml
 C:\Users\LENOVO\Source\Repos\Web_QLTSL\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 C:\Users\LENOVO\Source\Repos\Web_QLTSL\BUS\obj\Debug\BUS.dll
 C:\Users\LENOVO\Source\Repos\Web_QLTSL\BUS\obj\Debug\BUS.pdb
+D:\Project\Web_QLTSL\BUS\bin\Debug\BUS.dll
+D:\Project\Web_QLTSL\BUS\bin\Debug\BUS.pdb
+D:\Project\Web_QLTSL\BUS\bin\Debug\DAL.dll
+D:\Project\Web_QLTSL\BUS\bin\Debug\DTO.dll
+D:\Project\Web_QLTSL\BUS\bin\Debug\EntityFramework.dll
+D:\Project\Web_QLTSL\BUS\bin\Debug\DAL.pdb
+D:\Project\Web_QLTSL\BUS\bin\Debug\DTO.pdb
+D:\Project\Web_QLTSL\BUS\bin\Debug\EntityFramework.xml
+D:\Project\Web_QLTSL\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\Project\Web_QLTSL\BUS\obj\Debug\BUS.dll
+D:\Project\Web_QLTSL\BUS\obj\Debug\BUS.pdb

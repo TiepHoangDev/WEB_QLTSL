@@ -122,5 +122,35 @@ namespace DAL
             return new dbQLTSLEntities().SP_NGUOI_DUNG_QUYEN_Update(ob.ID, ob.ID_NGUOIDUNG, ob.ID_QUYEN) > 0;
         }
 
+
+        public List<NGUOI_DUNG_QUYEN_Object> GetByID_NGUOIDUNG(int id)
+        {
+            var list = new dbQLTSLEntities().SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG(id);
+            List<NGUOI_DUNG_QUYEN_Object> lst = new List<NGUOI_DUNG_QUYEN_Object>();
+            foreach (var item in list)
+            {
+                var obj = new NGUOI_DUNG_QUYEN_Object();
+
+                obj.ID = item.ID;
+                obj.ID_NGUOIDUNG = item.ID_NGUOIDUNG;
+                obj.ID_QUYEN = item.ID_QUYEN;
+
+                obj.NGUOI_DUNG_ObjectJoin = new NGUOI_DUNG_Object()
+                {
+                    HO_TEN = item.HO_TEN_NGUOI_DUNGJoin,
+                    ID_DONVI = item.ID_DONVI_NGUOI_DUNGJoin,
+                    ID_NGUOIDUNG = (System.Int32)item.ID_NGUOIDUNG
+                };
+
+                obj.QUYEN_ObjectJoin = new QUYEN_Object()
+                {
+                    ID_QUYEN = (System.Int32)item.ID_QUYEN,
+                    TEN_QUYEN = item.TEN_QUYEN_QUYENJoin
+                };
+
+                lst.Add(obj);
+            }
+            return lst;
+        }
     }
 }

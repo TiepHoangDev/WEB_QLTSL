@@ -4,7 +4,10 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="dbQLTSLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="dbQLTSLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_NGUOIDUNG" Type="int" Mode="In" />
+        </Function>
         <Function Name="SP_CheckLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="USERNAME" Type="nvarchar" Mode="In" />
           <Parameter Name="PASSWORD" Type="nvarchar" Mode="In" />
@@ -203,31 +206,39 @@
           <Parameter Name="TEN_VUNGKETNOI" Type="nvarchar" Mode="In" />
         </Function>
         <EntityContainer Name="dbQLTSLModelStoreContainer" />
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="dbQLTSLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="dbQLTSLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="dbQLTSLEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result)">
+            <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CheckLogin" ReturnType="Collection(dbQLTSLModel.SP_CheckLogin_Result)">
+            <Parameter Name="USERNAME" Mode="In" Type="String" />
+            <Parameter Name="PASSWORD" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="SP_DON_VI_Delete">
-          <Parameter Name="ID_DONVI" Mode="In" Type="Int32" />
+            <Parameter Name="ID_DONVI" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_DON_VI_GetAll" ReturnType="Collection(dbQLTSLModel.SP_DON_VI_GetAll_Result)" />
           <FunctionImport Name="SP_DON_VI_GetByID_DONVI" ReturnType="Collection(dbQLTSLModel.SP_DON_VI_GetByID_DONVI_Result)">
-          <Parameter Name="ID_DONVI" Mode="In" Type="Int32" />
+            <Parameter Name="ID_DONVI" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_DON_VI_Insert">
-          <Parameter Name="TEN_DONVI" Mode="In" Type="String" />
+            <Parameter Name="TEN_DONVI" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_DON_VI_Update">
             <Parameter Name="ID_DONVI" Mode="In" Type="Int32" />
             <Parameter Name="TEN_DONVI" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_KHACH_HANG_Delete">
-          <Parameter Name="ID_KHACHHANG" Mode="In" Type="Int32" />
+            <Parameter Name="ID_KHACHHANG" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_KHACH_HANG_GetAll" ReturnType="Collection(dbQLTSLModel.SP_KHACH_HANG_GetAll_Result)" />
           <FunctionImport Name="SP_KHACH_HANG_GetByID_KHACHHANG" ReturnType="Collection(dbQLTSLModel.SP_KHACH_HANG_GetByID_KHACHHANG_Result)">
-          <Parameter Name="ID_KHACHHANG" Mode="In" Type="Int32" />
+            <Parameter Name="ID_KHACHHANG" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_KHACH_HANG_Insert">
             <Parameter Name="CVLAN" Mode="In" Type="Int32" />
@@ -257,11 +268,11 @@
             <Parameter Name="THOIGIAN_CUNGCAP" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="SP_KHACHHANG_THIETBI_Delete">
-          <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="ID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_KHACHHANG_THIETBI_GetAll" ReturnType="Collection(dbQLTSLModel.SP_KHACHHANG_THIETBI_GetAll_Result)" />
           <FunctionImport Name="SP_KHACHHANG_THIETBI_GetByID" ReturnType="Collection(dbQLTSLModel.SP_KHACHHANG_THIETBI_GetByID_Result)">
-          <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="ID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_KHACHHANG_THIETBI_Insert">
             <Parameter Name="CONG" Mode="In" Type="String" />
@@ -277,25 +288,25 @@
             <Parameter Name="TOCDO" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_LOAI_DICHVU_Delete">
-          <Parameter Name="ID_LOAI_DICHVU" Mode="In" Type="Int32" />
+            <Parameter Name="ID_LOAI_DICHVU" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_LOAI_DICHVU_GetAll" ReturnType="Collection(dbQLTSLModel.SP_LOAI_DICHVU_GetAll_Result)" />
           <FunctionImport Name="SP_LOAI_DICHVU_GetByID_LOAI_DICHVU" ReturnType="Collection(dbQLTSLModel.SP_LOAI_DICHVU_GetByID_LOAI_DICHVU_Result)">
-          <Parameter Name="ID_LOAI_DICHVU" Mode="In" Type="Int32" />
+            <Parameter Name="ID_LOAI_DICHVU" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_LOAI_DICHVU_Insert">
-          <Parameter Name="TEN_LOAI_DICHVU" Mode="In" Type="String" />
+            <Parameter Name="TEN_LOAI_DICHVU" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_LOAI_DICHVU_Update">
             <Parameter Name="ID_LOAI_DICHVU" Mode="In" Type="Int32" />
             <Parameter Name="TEN_LOAI_DICHVU" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_NGUOI_DUNG_Delete">
-          <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+            <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="SP_NGUOI_DUNG_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result1)" />
-          <FunctionImport Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1)">
-          <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+          <FunctionImport Name="SP_NGUOI_DUNG_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result)" />
+          <FunctionImport Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result)">
+            <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_NGUOI_DUNG_Insert">
             <Parameter Name="HO_TEN" Mode="In" Type="String" />
@@ -305,11 +316,14 @@
             <Parameter Name="USERNAME" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_Delete">
-          <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="ID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetAll_Result)" />
+          <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result)">
+            <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
+          </FunctionImport>
           <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_GetByID" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetByID_Result)">
-          <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="ID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_Insert">
             <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
@@ -329,83 +343,94 @@
             <Parameter Name="USERNAME" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_NHOM_KHACH_HANG_Delete">
-          <Parameter Name="ID_NHOMKHACHHANG" Mode="In" Type="Int32" />
+            <Parameter Name="ID_NHOMKHACHHANG" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_NHOM_KHACH_HANG_GetAll" ReturnType="Collection(dbQLTSLModel.SP_NHOM_KHACH_HANG_GetAll_Result)" />
           <FunctionImport Name="SP_NHOM_KHACH_HANG_GetByID_NHOMKHACHHANG" ReturnType="Collection(dbQLTSLModel.SP_NHOM_KHACH_HANG_GetByID_NHOMKHACHHANG_Result)">
-          <Parameter Name="ID_NHOMKHACHHANG" Mode="In" Type="Int32" />
+            <Parameter Name="ID_NHOMKHACHHANG" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_NHOM_KHACH_HANG_Insert">
-          <Parameter Name="TEN_NHOMKHACHHANG" Mode="In" Type="String" />
+            <Parameter Name="TEN_NHOMKHACHHANG" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_NHOM_KHACH_HANG_Update">
             <Parameter Name="ID_NHOMKHACHHANG" Mode="In" Type="Int32" />
             <Parameter Name="TEN_NHOMKHACHHANG" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_QUYEN_Delete">
-          <Parameter Name="ID_QUYEN" Mode="In" Type="Int32" />
+            <Parameter Name="ID_QUYEN" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_QUYEN_GetAll" ReturnType="Collection(dbQLTSLModel.SP_QUYEN_GetAll_Result)" />
           <FunctionImport Name="SP_QUYEN_GetByID_QUYEN" ReturnType="Collection(dbQLTSLModel.SP_QUYEN_GetByID_QUYEN_Result)">
-          <Parameter Name="ID_QUYEN" Mode="In" Type="Int32" />
+            <Parameter Name="ID_QUYEN" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_QUYEN_Insert">
-          <Parameter Name="TEN_QUYEN" Mode="In" Type="String" />
+            <Parameter Name="TEN_QUYEN" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_QUYEN_Update">
             <Parameter Name="ID_QUYEN" Mode="In" Type="Int32" />
             <Parameter Name="TEN_QUYEN" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_THIET_BI_Delete">
-          <Parameter Name="ID_THIETBI" Mode="In" Type="Int32" />
+            <Parameter Name="ID_THIETBI" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_THIET_BI_GetAll" ReturnType="Collection(dbQLTSLModel.SP_THIET_BI_GetAll_Result)" />
           <FunctionImport Name="SP_THIET_BI_GetByID_THIETBI" ReturnType="Collection(dbQLTSLModel.SP_THIET_BI_GetByID_THIETBI_Result)">
-          <Parameter Name="ID_THIETBI" Mode="In" Type="Int32" />
+            <Parameter Name="ID_THIETBI" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_THIET_BI_Insert">
-          <Parameter Name="TEN_THIETBI" Mode="In" Type="String" />
+            <Parameter Name="TEN_THIETBI" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_THIET_BI_Update">
             <Parameter Name="ID_THIETBI" Mode="In" Type="Int32" />
             <Parameter Name="TEN_THIETBI" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_TRANG_THAI_Delete">
-          <Parameter Name="ID_TRANGTHAI" Mode="In" Type="Int32" />
+            <Parameter Name="ID_TRANGTHAI" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_TRANG_THAI_GetAll" ReturnType="Collection(dbQLTSLModel.SP_TRANG_THAI_GetAll_Result)" />
           <FunctionImport Name="SP_TRANG_THAI_GetByID_TRANGTHAI" ReturnType="Collection(dbQLTSLModel.SP_TRANG_THAI_GetByID_TRANGTHAI_Result)">
-          <Parameter Name="ID_TRANGTHAI" Mode="In" Type="Int32" />
+            <Parameter Name="ID_TRANGTHAI" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_TRANG_THAI_Insert">
-          <Parameter Name="TEN_TRANGTHAI" Mode="In" Type="String" />
+            <Parameter Name="TEN_TRANGTHAI" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_TRANG_THAI_Update">
             <Parameter Name="ID_TRANGTHAI" Mode="In" Type="Int32" />
             <Parameter Name="TEN_TRANGTHAI" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_VUNGKETNOI_Delete">
-          <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
+            <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_VUNGKETNOI_GetAll" ReturnType="Collection(dbQLTSLModel.SP_VUNGKETNOI_GetAll_Result)" />
           <FunctionImport Name="SP_VUNGKETNOI_GetByID_VUNGKETNOI" ReturnType="Collection(dbQLTSLModel.SP_VUNGKETNOI_GetByID_VUNGKETNOI_Result)">
-          <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
+            <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_VUNGKETNOI_Insert">
-          <Parameter Name="TEN_VUNGKETNOI" Mode="In" Type="String" />
+            <Parameter Name="TEN_VUNGKETNOI" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SP_VUNGKETNOI_Update">
             <Parameter Name="ID_VUNGKETNOI" Mode="In" Type="Int32" />
             <Parameter Name="TEN_VUNGKETNOI" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="SP_CheckLogin" ReturnType="Collection(dbQLTSLModel.SP_CheckLogin_Result)">
-            <Parameter Name="USERNAME" Mode="In" Type="String" />
-            <Parameter Name="PASSWORD" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" ReturnType="Collection(dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1)">
-          <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
-          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
+          <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
+          <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
+          <Property Type="Int32" Name="SDT_NGUOI_DUNGJoin" Nullable="true" />
+          <Property Type="String" Name="USERNAME_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="SP_CheckLogin_Result">
+          <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
+          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
+          <Property Type="Int32" Name="SDT" Nullable="true" />
+          <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
+        </ComplexType>
         <ComplexType Name="SP_DON_VI_GetAll_Result">
           <Property Type="Int32" Name="ID_DONVI" Nullable="false" />
           <Property Type="String" Name="TEN_DONVI" Nullable="true" MaxLength="255" />
@@ -500,7 +525,6 @@
           <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
           <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
-          <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="SDT" Nullable="true" />
           <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
@@ -509,7 +533,6 @@
           <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
           <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
-          <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="SDT" Nullable="true" />
           <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
@@ -524,13 +547,21 @@
           <Property Type="String" Name="USERNAME_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
         </ComplexType>
+        <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
+          <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
+          <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
+          <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="ID_QUYENJoin" Nullable="false" />
+        </ComplexType>
         <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetByID_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
           <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
           <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
           <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
-          <Property Type="String" Name="PASSWORD_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="SDT_NGUOI_DUNGJoin" Nullable="true" />
           <Property Type="String" Name="USERNAME_NGUOI_DUNGJoin" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
@@ -575,50 +606,38 @@
           <Property Type="Int32" Name="ID_VUNGKETNOI" Nullable="false" />
           <Property Type="String" Name="TEN_VUNGKETNOI" Nullable="true" MaxLength="50" />
         </ComplexType>
-        <ComplexType Name="SP_CheckLogin_Result">
-          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
-          <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
-          <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
-          <Property Type="Int32" Name="SDT" Nullable="true" />
-          <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
-        </ComplexType>
-        <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
-          <Property Type="Int32" Name="ID" Nullable="false" />
-          <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
-          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1">
-          <Property Type="Int32" Name="ID" Nullable="false" />
-          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="true" />
-          <Property Type="Int32" Name="ID_QUYEN" Nullable="true" />
-          <Property Type="String" Name="HO_TEN_NGUOI_DUNGJoin" Nullable="true" MaxLength="50" />
-          <Property Type="Int32" Name="ID_DONVI_NGUOI_DUNGJoin" Nullable="true" />
-          <Property Type="String" Name="TEN_QUYEN_QUYENJoin" Nullable="true" MaxLength="255" />
-          <Property Type="Int32" Name="ID_QUYENJoin" Nullable="false" />
-        </ComplexType>
-        <ComplexType Name="SP_NGUOI_DUNG_GetAll_Result1">
-          <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
-          <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
-          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
-          <Property Type="Int32" Name="SDT" Nullable="true" />
-          <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
-        </ComplexType>
-        <ComplexType Name="SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1">
-          <Property Type="String" Name="HO_TEN" Nullable="true" MaxLength="50" />
-          <Property Type="Int32" Name="ID_DONVI" Nullable="true" />
-          <Property Type="Int32" Name="ID_NGUOIDUNG" Nullable="false" />
-          <Property Type="Int32" Name="SDT" Nullable="true" />
-          <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="TEN_DONVI_DON_VIJoin" Nullable="true" MaxLength="255" />
-        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="dbQLTSLModelStoreContainer" CdmEntityContainer="dbQLTSLEntities" >
+          <FunctionImportMapping FunctionImportName="NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbQLTSLModel.NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+                <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
+                <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
+                <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
+                <ScalarProperty Name="SDT_NGUOI_DUNGJoin" ColumnName="SDT_NGUOI_DUNGJoin" />
+                <ScalarProperty Name="USERNAME_NGUOI_DUNGJoin" ColumnName="USERNAME_NGUOI_DUNGJoin" />
+                <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_CheckLogin" FunctionName="dbQLTSLModel.Store.SP_CheckLogin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_CheckLogin_Result">
+                <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
+                <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
+                <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SP_DON_VI_Delete" FunctionName="dbQLTSLModel.Store.SP_DON_VI_Delete" />
           <FunctionImportMapping FunctionImportName="SP_DON_VI_GetAll" FunctionName="dbQLTSLModel.Store.SP_DON_VI_GetAll">
             <ResultMapping>
@@ -755,8 +774,8 @@
           <FunctionImportMapping FunctionImportName="SP_LOAI_DICHVU_Update" FunctionName="dbQLTSLModel.Store.SP_LOAI_DICHVU_Update" />
           <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_Delete" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_Delete" />
           <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_GetAll" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_GetAll">
-          <ResultMapping>
-              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetAll_Result">
                 <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
                 <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
                 <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
@@ -767,8 +786,8 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_GetByID_NGUOIDUNG">
-          <ResultMapping>
-              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result">
                 <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
                 <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
                 <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
@@ -794,6 +813,19 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
+                <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
+                <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
+                <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
+                <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
+                <ScalarProperty Name="ID_QUYENJoin" ColumnName="ID_QUYENJoin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_GetByID" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_GetByID">
             <ResultMapping>
               <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetByID_Result">
@@ -802,7 +834,6 @@
                 <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
                 <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
                 <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
-                <ScalarProperty Name="PASSWORD_NGUOI_DUNGJoin" ColumnName="PASSWORD_NGUOI_DUNGJoin" />
                 <ScalarProperty Name="SDT_NGUOI_DUNGJoin" ColumnName="SDT_NGUOI_DUNGJoin" />
                 <ScalarProperty Name="USERNAME_NGUOI_DUNGJoin" ColumnName="USERNAME_NGUOI_DUNGJoin" />
                 <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
@@ -907,31 +938,6 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Insert" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Insert" />
           <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Update" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Update" />
-          <FunctionImportMapping FunctionImportName="SP_CheckLogin" FunctionName="dbQLTSLModel.Store.SP_CheckLogin">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_CheckLogin_Result">
-                <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
-                <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
-                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
-                <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
-                <ScalarProperty Name="SDT" ColumnName="SDT" />
-                <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG">
-          <ResultMapping>
-              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result1">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />
-                <ScalarProperty Name="ID_QUYEN" ColumnName="ID_QUYEN" />
-                <ScalarProperty Name="HO_TEN_NGUOI_DUNGJoin" ColumnName="HO_TEN_NGUOI_DUNGJoin" />
-                <ScalarProperty Name="ID_DONVI_NGUOI_DUNGJoin" ColumnName="ID_DONVI_NGUOI_DUNGJoin" />
-                <ScalarProperty Name="TEN_QUYEN_QUYENJoin" ColumnName="TEN_QUYEN_QUYENJoin" />
-                <ScalarProperty Name="ID_QUYENJoin" ColumnName="ID_QUYENJoin" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

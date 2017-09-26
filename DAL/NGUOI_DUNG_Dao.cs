@@ -144,6 +144,7 @@ namespace DAL
                     ID_NGUOIDUNG = item.ID_NGUOIDUNG,
                     ID_DONVI = item.ID_DONVI,
                     HO_TEN = item.HO_TEN,
+                    PASSWORD = item.PASSWORD,
                     DON_VI_ObjectJoin = new DON_VI_Object()
                     {
                         ID_DONVI = (System.Int32)item.ID_DONVI,

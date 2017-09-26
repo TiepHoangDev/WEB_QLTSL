@@ -24,6 +24,7 @@
           <ScalarProperty Name="SDT" ColumnName="SDT" />
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
           <ScalarProperty Name="TEN_DONVI_DON_VIJoin" ColumnName="TEN_DONVI_DON_VIJoin" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -176,7 +177,7 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_GetByID_NGUOIDUNG" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_GetByID_NGUOIDUNG">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result">
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_NGUOI_DUNG_GetByID_NGUOIDUNG_Result1">
           <ScalarProperty Name="HO_TEN" ColumnName="HO_TEN" />
           <ScalarProperty Name="ID_DONVI" ColumnName="ID_DONVI" />
           <ScalarProperty Name="ID_NGUOIDUNG" ColumnName="ID_NGUOIDUNG" />

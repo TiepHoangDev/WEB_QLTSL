@@ -30,3 +30,7 @@
 [2017-09-26 5:41:45 PM] >> [<b>admin</b>]   -   [<b>Add</b>]   -   [<b>tai-khoan</b>]   -  <a href='http://localhost:51441/Page/tai-khoan/edit.aspx'><b>[http://localhost:51441/Page/tai-khoan/edit.aspx]</b></a>.
 [2017-09-26 5:42:18 PM] >> [<b>admin</b>]   -   [<b>Edit</b>]   -   [<b>phan-quyen</b>]   -  <a href='http://localhost:51441/page/phan-quyen/edit.aspx?=6'><b>[http://localhost:51441/page/phan-quyen/edit.aspx?=6]</b></a>.
 [2017-09-26 5:42:22 PM] >> [<b>admin</b>]   -   [<b>Edit</b>]   -   [<b>phan-quyen</b>]   -  <a href='http://localhost:51441/page/phan-quyen/edit.aspx?=6'><b>[http://localhost:51441/page/phan-quyen/edit.aspx?=6]</b></a>.
+[2017-09-26 10:40:45 PM] >> [<b>admin</b>]   -   [<b>Edit</b>]   -   [<b>trang-chu</b>]   -  <a href='http://localhost:51441/page/trang-chu/edit.aspx?=1'><b>[http://localhost:51441/page/trang-chu/edit.aspx?=1]</b></a>.
+[2017-09-26 10:40:56 PM] >> [<b>admin</b>]   -   [<b>Edit</b>]   -   [<b>trang-chu</b>]   -  <a href='http://localhost:51441/page/trang-chu/edit.aspx?=3'><b>[http://localhost:51441/page/trang-chu/edit.aspx?=3]</b></a>.
+[2017-09-26 10:41:05 PM] >> [<b>admin</b>]   -   [<b>Edit</b>]   -   [<b>trang-chu</b>]   -  <a href='http://localhost:51441/page/trang-chu/edit.aspx?=2'><b>[http://localhost:51441/page/trang-chu/edit.aspx?=2]</b></a>.
+[2017-09-26 10:43:22 PM] >> [<b>admin</b>]   -   [<b>Add</b>]   -   [<b>trang-chu</b>]   -  <a href='http://localhost:51441/page/trang-chu/edit.aspx'><b>[http://localhost:51441/page/trang-chu/edit.aspx]</b></a>.

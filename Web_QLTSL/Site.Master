@@ -138,6 +138,14 @@
                         <b class="arrow"></b>
                     </li>
 
+                    <li class="">
+                        <a href="/page/khachhang-thietbi">
+                            <i class="menu-icon fa fa-user"></i>
+                            <span class="menu-text">Khách hàng - thiết bị</span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
 
                     <li class="">
                         <a href="#" class="dropdown-toggle">

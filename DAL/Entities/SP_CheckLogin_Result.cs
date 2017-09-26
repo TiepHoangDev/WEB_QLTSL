@@ -19,5 +19,6 @@ namespace DAL.Entities
         public Nullable<int> SDT { get; set; }
         public string USERNAME { get; set; }
         public string TEN_DONVI_DON_VIJoin { get; set; }
+        public string PASSWORD { get; set; }
     }
 }

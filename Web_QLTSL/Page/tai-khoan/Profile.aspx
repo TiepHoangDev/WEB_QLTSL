@@ -22,9 +22,9 @@
         </div>
     </div>
     <div class="box-footer">
-        <asp:Label ID="lblReslut" Text="" runat="server" />
+        <p><asp:Label ID="lblReslut" Text="" runat="server" /></p>
         <asp:Button Text="Hoàn thành" ID="btnOk" CssClass="btn btn-success" OnClick="btnOk_Click" runat="server" />
-        <a href="default.aspx" class="btn btn-info">Đăng xuất</a>
+        <a href="/login.aspx?=out" class="btn btn-info">Đăng xuất</a>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">

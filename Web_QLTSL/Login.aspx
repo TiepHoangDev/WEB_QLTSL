@@ -35,6 +35,7 @@
 		<script src="/Content/assets/js/html5shiv.min.js"></script>
 		<script src="/Content/assets/js/respond.min.js"></script>
 		<![endif]-->
+    <link href="/Content/images/login.ico" rel="shortcut icon" />
 </head>
 
 <body class="login-layout">

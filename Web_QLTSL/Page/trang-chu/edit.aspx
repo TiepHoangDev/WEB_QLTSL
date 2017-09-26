@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="style" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+    <script src="/Content/assets/js/bootstrap-datepicker.min.js"></script>
     <div class="box-header">
         <h2>
             <asp:Literal ID="ltrAction" Text="" runat="server" />
@@ -16,8 +17,14 @@
         </div>
         <div class="form-group">
             <label>Thời gian cung cấp</label>
-            <input type="date" required class="form-control" id="date" placeholder="12/12/2017" runat="server">
+            <input type="text" required class="form-control" id="txtdate" runat="server">
+            <script>
+                $("#body_txtdate").datepicker({
+                    format: 'dd-mm-yyyy'
+                });
+            </script>
         </div>
+        <script src="../../Content/assets/js/bootstrap-datepicker.min.js"></script>
         <div class="form-group">
             <label>IPGATEWAY</label>
             <input type="text" required class="form-control" id="IPGATEWAY" placeholder="IPGATEWAY" runat="server">

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Web_QLTSL.Page.Log_he_thong;
 
 namespace Web_QLTSL.Page.trang_chu
 {
@@ -46,7 +47,7 @@ namespace Web_QLTSL.Page.trang_chu
                     IPWAN.Value = ob.IPWAN;
                     SVLAN.Value = ob.SVLAN.ToString();
                     txtTenKhachHang.Value = ob.TEN_KHACHHANG;
-                    date.Value = ob.THOIGIAN_CUNGCAP.ToString();
+                    txtdate.Value = ob.THOIGIAN_CUNGCAP.Value.ToString("dd/MM/yyyy");
                 }
             }
         }
@@ -55,7 +56,7 @@ namespace Web_QLTSL.Page.trang_chu
         {
             var ob = new DTO.KHACH_HANG_Object()
             {
-                ID_KHACHHANG = int.Parse(txtIDKhachHang.Value),
+                ID_KHACHHANG = id,
                 ID_LOAIDICHVU = int.Parse(dropNhomKhachHang.SelectedValue),
                 ID_NHOMKHACHHANG = int.Parse(dropNhomKhachHang.SelectedValue),
                 ID_TRANGTHAI = int.Parse(dropTrangThai.SelectedValue),
@@ -66,10 +67,12 @@ namespace Web_QLTSL.Page.trang_chu
                 IPWAN = IPWAN.Value,
                 SVLAN = int.Parse(SVLAN.Value),
                 TEN_KHACHHANG = txtTenKhachHang.Value,
-                THOIGIAN_CUNGCAP = DateTime.Parse(date.Value)
+                THOIGIAN_CUNGCAP = DateTime.Parse(txtdate.Value)
             };
             if (isCreate) new KHACH_HANG_Bus().Insert(ob);
             else new KHACH_HANG_Bus().Update(ob);
+
+            new LogHeThong().Add(isCreate ? LogHeThong.eAction.Add : LogHeThong.eAction.Edit);
             Response.Redirect("default.aspx");
         }
     }

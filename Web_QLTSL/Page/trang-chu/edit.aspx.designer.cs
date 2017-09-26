@@ -40,13 +40,13 @@ namespace Web_QLTSL.Page.trang_chu {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtTenKhachHang;
         
         /// <summary>
-        /// date control.
+        /// txtdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl date;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtdate;
         
         /// <summary>
         /// IPGATEWAY control.

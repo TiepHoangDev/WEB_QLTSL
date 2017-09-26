@@ -83,6 +83,9 @@
     <Compile Include="Entities\SP_KHACHHANG_THIETBI_GetAll_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\SP_KHACHHANG_THIETBI_GetByID_KHACHHANG_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\SP_KHACHHANG_THIETBI_GetByID_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

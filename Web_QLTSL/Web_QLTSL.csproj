@@ -113,7 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Page\nhom-quyen\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\assets\css\ace-ie.min.css" />
@@ -245,6 +244,8 @@
     <Content Include="Content\assets\swf\flashExport.swf" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\login.ico" />
+    <Content Include="Content\images\transfer.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -264,6 +265,15 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="NotQUYEN.aspx" />
+    <Content Include="Page\loai-dich-vu\default.aspx" />
+    <Content Include="Page\loai-dich-vu\delete.aspx" />
+    <Content Include="Page\loai-dich-vu\edit.aspx" />
+    <Content Include="Page\nhom-khach-hang\default.aspx" />
+    <Content Include="Page\nhom-khach-hang\delete.aspx" />
+    <Content Include="Page\nhom-khach-hang\edit.aspx" />
+    <Content Include="Page\don-vi\default.aspx" />
+    <Content Include="Page\don-vi\delete.aspx" />
+    <Content Include="Page\don-vi\edit.aspx" />
     <Content Include="Page\khachhang-thietbi\delete.aspx" />
     <Content Include="Page\khachhang-thietbi\edit.aspx" />
     <Content Include="Page\khachhang-thietbi\default.aspx" />
@@ -275,9 +285,18 @@
     <Content Include="Page\tai-khoan\delete.aspx" />
     <Content Include="Page\tai-khoan\edit.aspx" />
     <Content Include="Page\tai-khoan\reset.aspx" />
+    <Content Include="Page\thiet-bi\default.aspx" />
+    <Content Include="Page\thiet-bi\delete.aspx" />
+    <Content Include="Page\thiet-bi\edit.aspx" />
     <Content Include="Page\trang-chu\Default.aspx" />
     <Content Include="Page\trang-chu\delete.aspx" />
     <Content Include="Page\trang-chu\edit.aspx" />
+    <Content Include="Page\trang-thai\default.aspx" />
+    <Content Include="Page\trang-thai\delete.aspx" />
+    <Content Include="Page\trang-thai\edit.aspx" />
+    <Content Include="Page\vung-ket-noi\default.aspx" />
+    <Content Include="Page\vung-ket-noi\delete.aspx" />
+    <Content Include="Page\vung-ket-noi\edit.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -355,6 +374,70 @@
     </Compile>
     <Compile Include="NotQUYEN.aspx.designer.cs">
       <DependentUpon>NotQUYEN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\loai-dich-vu\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\loai-dich-vu\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\loai-dich-vu\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\loai-dich-vu\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\loai-dich-vu\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\loai-dich-vu\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Log-he-thong\LogHeThong.cs" />
+    <Compile Include="Page\nhom-khach-hang\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\nhom-khach-hang\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\nhom-khach-hang\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\nhom-khach-hang\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\nhom-khach-hang\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\nhom-khach-hang\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\don-vi\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\don-vi\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\don-vi\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\don-vi\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\don-vi\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\don-vi\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\khachhang-thietbi\delete.aspx.cs">
       <DependentUpon>delete.aspx</DependentUpon>
@@ -434,6 +517,27 @@
     <Compile Include="Page\tai-khoan\reset.aspx.designer.cs">
       <DependentUpon>reset.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page\thiet-bi\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\thiet-bi\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\thiet-bi\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\thiet-bi\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\thiet-bi\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\thiet-bi\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\trang-chu\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -453,6 +557,48 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Page\trang-chu\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\trang-thai\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\trang-thai\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\trang-thai\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\trang-thai\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\trang-thai\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\trang-thai\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\vung-ket-noi\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\vung-ket-noi\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\vung-ket-noi\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\vung-ket-noi\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\vung-ket-noi\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\vung-ket-noi\edit.aspx.designer.cs">
       <DependentUpon>edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

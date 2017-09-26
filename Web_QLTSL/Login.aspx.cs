@@ -21,7 +21,7 @@ namespace Web_QLTSL
         {
             if (new Core.Login().CheckLogin(txtUsername.Value, txtPassword.Value))
             {
-                Response.Redirect("/Page/khachhang-thietbi");
+                Response.Redirect("/page/trang-chu");
             }
             else
             {

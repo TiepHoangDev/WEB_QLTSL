@@ -328,5 +328,28 @@
     <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Insert" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Insert" />
     <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Update" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Update" />
     <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_ResetPassword" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_ResetPassword" />
+    <FunctionImportMapping FunctionImportName="SP_KHACHHANG_THIETBI_GetByID_KHACHHANG" FunctionName="dbQLTSLModel.Store.SP_KHACHHANG_THIETBI_GetByID_KHACHHANG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbQLTSLModel.SP_KHACHHANG_THIETBI_GetByID_KHACHHANG_Result">
+          <ScalarProperty Name="CONG" ColumnName="CONG" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_KHACHHANG" ColumnName="ID_KHACHHANG" />
+          <ScalarProperty Name="ID_THIETBI" ColumnName="ID_THIETBI" />
+          <ScalarProperty Name="TOCDO" ColumnName="TOCDO" />
+          <ScalarProperty Name="CVLAN_KHACH_HANGJoin" ColumnName="CVLAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_LOAIDICHVU_KHACH_HANGJoin" ColumnName="ID_LOAIDICHVU_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_NHOMKHACHHANG_KHACH_HANGJoin" ColumnName="ID_NHOMKHACHHANG_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_TRANGTHAI_KHACH_HANGJoin" ColumnName="ID_TRANGTHAI_KHACH_HANGJoin" />
+          <ScalarProperty Name="ID_VUNGKETNOI_KHACH_HANGJoin" ColumnName="ID_VUNGKETNOI_KHACH_HANGJoin" />
+          <ScalarProperty Name="IPGATEWAY_KHACH_HANGJoin" ColumnName="IPGATEWAY_KHACH_HANGJoin" />
+          <ScalarProperty Name="IPLAN_KHACH_HANGJoin" ColumnName="IPLAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="IPWAN_KHACH_HANGJoin" ColumnName="IPWAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="SVLAN_KHACH_HANGJoin" ColumnName="SVLAN_KHACH_HANGJoin" />
+          <ScalarProperty Name="TEN_KHACHHANG_KHACH_HANGJoin" ColumnName="TEN_KHACHHANG_KHACH_HANGJoin" />
+          <ScalarProperty Name="THOIGIAN_CUNGCAP_KHACH_HANGJoin" ColumnName="THOIGIAN_CUNGCAP_KHACH_HANGJoin" />
+          <ScalarProperty Name="TEN_THIETBI_THIET_BIJoin" ColumnName="TEN_THIETBI_THIET_BIJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

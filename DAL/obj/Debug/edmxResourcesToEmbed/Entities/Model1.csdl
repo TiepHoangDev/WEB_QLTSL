@@ -206,6 +206,9 @@
       <Parameter Name="RePassword" Mode="In" Type="String" />
       <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="SP_KHACHHANG_THIETBI_GetByID_KHACHHANG" ReturnType="Collection(dbQLTSLModel.SP_KHACHHANG_THIETBI_GetByID_KHACHHANG_Result)">
+      <Parameter Name="ID_KHACHHANG" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
     <Property Type="Int32" Name="ID" Nullable="false" />
@@ -399,5 +402,24 @@
   <ComplexType Name="SP_VUNGKETNOI_GetByID_VUNGKETNOI_Result">
     <Property Type="Int32" Name="ID_VUNGKETNOI" Nullable="false" />
     <Property Type="String" Name="TEN_VUNGKETNOI" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_KHACHHANG_THIETBI_GetByID_KHACHHANG_Result">
+    <Property Type="String" Name="CONG" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="ID_KHACHHANG" Nullable="false" />
+    <Property Type="Int32" Name="ID_THIETBI" Nullable="false" />
+    <Property Type="String" Name="TOCDO" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CVLAN_KHACH_HANGJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_LOAIDICHVU_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="Int32" Name="ID_NHOMKHACHHANG_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="Int32" Name="ID_TRANGTHAI_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="Int32" Name="ID_VUNGKETNOI_KHACH_HANGJoin" Nullable="false" />
+    <Property Type="String" Name="IPGATEWAY_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPLAN_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPWAN_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SVLAN_KHACH_HANGJoin" Nullable="true" />
+    <Property Type="String" Name="TEN_KHACHHANG_KHACH_HANGJoin" Nullable="true" />
+    <Property Type="DateTime" Name="THOIGIAN_CUNGCAP_KHACH_HANGJoin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="TEN_THIETBI_THIET_BIJoin" Nullable="false" />
   </ComplexType>
 </Schema>

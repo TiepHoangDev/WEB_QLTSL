@@ -8,6 +8,7 @@
     <h2>Danh sách Khách hàng sử dụng thiết bị</h2>
     <div>
         <a href="edit.aspx" runat="server" id="btnThem" visible='<%#allowThem_Sua_Xoa %>' class="btn btn-success">Thêm mới</a>
+        <asp:Button Text="Xuất Excel" ID="btnExcel" OnClick="btnExcel_Click" runat="server" />
     </div>
     <table class="table dataTable" id="data-table">
         <thead>

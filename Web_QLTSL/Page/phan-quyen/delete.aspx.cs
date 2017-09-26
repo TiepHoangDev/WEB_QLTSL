@@ -22,7 +22,8 @@ namespace Web_QLTSL.Page.phan_quyen
 
         protected void btnOk_Click(object sender, EventArgs e)
         {
-            new NGUOI_DUNG_QUYEN_Bus().Delete(id);
+            new NGUOI_DUNG_Bus().Delete(id);
+            new Log_he_thong.LogHeThong().Add(Log_he_thong.LogHeThong.eAction.Delete);
             Response.Redirect("default.aspx");
         }
     }

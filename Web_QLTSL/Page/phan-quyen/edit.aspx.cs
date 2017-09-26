@@ -54,6 +54,7 @@ namespace Web_QLTSL.Page.phan_quyen
                 Xem = cbXem.Checked,
                 Them_Sua_Xoa = cbThemSuaXoa.Checked
             });
+            new Log_he_thong.LogHeThong().Add(Log_he_thong.LogHeThong.eAction.Edit);
             Response.Redirect("default.aspx");
         }
     }

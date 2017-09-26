@@ -8,6 +8,8 @@
     <h2>Danh sách Khách hàng</h2>
     <div>
         <a href="edit.aspx" runat="server" id="btnThem" visible='<%# allowThem_Sua_Xoa %>' class="btn btn-success">Thêm mới</a>
+        <asp:Button Text="Xuất Excel" runat="server" CssClass="btn btn-primary" ID="btnExcel" OnClick="btnExcel_Click" />
+
     </div>
     <table class="table dataTable" id="data-table">
         <thead>
@@ -30,17 +32,17 @@
             <asp:Repeater ID="repeater" runat="server">
                 <ItemTemplate>
                     <tr>
-                        <td><%#Eval("TEN_KHACHHANG") %></td>
-                        <td><%#Eval("THOIGIAN_CUNGCAP") %></td>
+                        <td><a href="<%#Eval("ID_KHACHHANG","/page/khachhang-thietbi?={0}") %>"><%#Eval("TEN_KHACHHANG") %></a></td>
+                        <td><%#((DateTime)Eval("THOIGIAN_CUNGCAP")).ToString("dd-MM-yyyy") %></td>
                         <td><%#Eval("IPGATEWAY") %></td>
                         <td><%#Eval("IPLAN") %></td>
                         <td><%#Eval("IPWAN") %></td>
                         <td><%#Eval("SVLAN") %></td>
                         <td><%#Eval("CVLAN") %></td>
-                        <td><a href='<%#Eval("ID_LOAIDICHVU","/loai-dich-vu/edit.aspx?={0}") %>'><%#Eval("LOAI_DICHVU_ObjectJoin.TEN_LOAI_DICHVU") %></a></td>
-                        <td><a href="<%#Eval("ID_NHOMKHACHHANG","/nhom-khach-hang/edit.aspx?={0}") %>"><%#Eval("NHOM_KHACH_HANG_ObjectJoin.TEN_NHOMKHACHHANG") %></a></td>
-                        <td><a href='<%#Eval("ID_VUNGKETNOI","/vung-ket-noi/edit.aspx?={0}") %>'><%#Eval("VUNGKETNOI_ObjectJoin.TEN_VUNGKETNOI") %></a></td>
-                        <td><a href='<%#Eval("ID_TRANGTHAI","/trang-thai/edit.aspx?={0}") %>'><%#Eval("TRANG_THAI_ObjectJoin.TEN_TRANGTHAI") %></a></td>
+                        <td><a href='<%#Eval("ID_LOAIDICHVU","/page/loai-dich-vu/edit.aspx?={0}") %>'><%#Eval("LOAI_DICHVU_ObjectJoin.TEN_LOAI_DICHVU") %></a></td>
+                        <td><a href="<%#Eval("ID_NHOMKHACHHANG","/page/nhom-khach-hang/edit.aspx?={0}") %>"><%#Eval("NHOM_KHACH_HANG_ObjectJoin.TEN_NHOMKHACHHANG") %></a></td>
+                        <td><a href='<%#Eval("ID_VUNGKETNOI","/page/vung-ket-noi/edit.aspx?={0}") %>'><%#Eval("VUNGKETNOI_ObjectJoin.TEN_VUNGKETNOI") %></a></td>
+                        <td><a href='<%#Eval("ID_TRANGTHAI","/page/trang-thai/edit.aspx?={0}") %>'><%#Eval("TRANG_THAI_ObjectJoin.TEN_TRANGTHAI") %></a></td>
                         <td>
                             <a visible='<%#allowThem_Sua_Xoa%>' href='<%#Eval("ID_KHACHHANG","edit.aspx?={0}") %>' runat="server" class="btn btn-info">Sửa</a>
                             <a visible='<%#allowThem_Sua_Xoa %>' href='<%#Eval("ID_KHACHHANG","delete.aspx?={0}") %>' runat="server" class="btn btn-warning">Xóa</a>
@@ -50,7 +52,6 @@
             </asp:Repeater>
         </tbody>
     </table>
-    <asp:Button Text="Xuất Excel" runat="server" ID="btnExcel" OnClick="btnExcel_Click" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
     <script>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="dbQLTSLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="dbQLTSLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <Function Name="NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID_NGUOIDUNG" Type="int" Mode="In" />
         </Function>
@@ -66,6 +66,9 @@
         <Function Name="SP_KHACHHANG_THIETBI_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SP_KHACHHANG_THIETBI_GetByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_KHACHHANG_THIETBI_GetByID_KHACHHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_KHACHHANG" Type="int" Mode="In" />
         </Function>
         <Function Name="SP_KHACHHANG_THIETBI_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CONG" Type="varchar" Mode="In" />
@@ -421,6 +424,9 @@
             <Parameter Name="RePassword" Mode="In" Type="String" />
             <Parameter Name="ID_NGUOIDUNG" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="SP_KHACHHANG_THIETBI_GetByID_KHACHHANG" ReturnType="Collection(dbQLTSLModel.SP_KHACHHANG_THIETBI_GetByID_KHACHHANG_Result)">
+            <Parameter Name="ID_KHACHHANG" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="NGUOI_DUNG_QUYEN_GetBy_ID_NGUOIDUNG_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
@@ -614,6 +620,25 @@
         <ComplexType Name="SP_VUNGKETNOI_GetByID_VUNGKETNOI_Result">
           <Property Type="Int32" Name="ID_VUNGKETNOI" Nullable="false" />
           <Property Type="String" Name="TEN_VUNGKETNOI" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_KHACHHANG_THIETBI_GetByID_KHACHHANG_Result">
+          <Property Type="String" Name="CONG" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="ID_KHACHHANG" Nullable="false" />
+          <Property Type="Int32" Name="ID_THIETBI" Nullable="false" />
+          <Property Type="String" Name="TOCDO" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="CVLAN_KHACH_HANGJoin" Nullable="true" />
+          <Property Type="Int32" Name="ID_LOAIDICHVU_KHACH_HANGJoin" Nullable="false" />
+          <Property Type="Int32" Name="ID_NHOMKHACHHANG_KHACH_HANGJoin" Nullable="false" />
+          <Property Type="Int32" Name="ID_TRANGTHAI_KHACH_HANGJoin" Nullable="false" />
+          <Property Type="Int32" Name="ID_VUNGKETNOI_KHACH_HANGJoin" Nullable="false" />
+          <Property Type="String" Name="IPGATEWAY_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IPLAN_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IPWAN_KHACH_HANGJoin" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="SVLAN_KHACH_HANGJoin" Nullable="true" />
+          <Property Type="String" Name="TEN_KHACHHANG_KHACH_HANGJoin" Nullable="true" />
+          <Property Type="DateTime" Name="THOIGIAN_CUNGCAP_KHACH_HANGJoin" Nullable="true" Precision="23" />
+          <Property Type="String" Name="TEN_THIETBI_THIET_BIJoin" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -948,6 +973,29 @@
           <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Insert" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Insert" />
           <FunctionImportMapping FunctionImportName="SP_VUNGKETNOI_Update" FunctionName="dbQLTSLModel.Store.SP_VUNGKETNOI_Update" />
           <FunctionImportMapping FunctionImportName="SP_NGUOI_DUNG_ResetPassword" FunctionName="dbQLTSLModel.Store.SP_NGUOI_DUNG_ResetPassword" />
+          <FunctionImportMapping FunctionImportName="SP_KHACHHANG_THIETBI_GetByID_KHACHHANG" FunctionName="dbQLTSLModel.Store.SP_KHACHHANG_THIETBI_GetByID_KHACHHANG">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbQLTSLModel.SP_KHACHHANG_THIETBI_GetByID_KHACHHANG_Result">
+                <ScalarProperty Name="CONG" ColumnName="CONG" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_KHACHHANG" ColumnName="ID_KHACHHANG" />
+                <ScalarProperty Name="ID_THIETBI" ColumnName="ID_THIETBI" />
+                <ScalarProperty Name="TOCDO" ColumnName="TOCDO" />
+                <ScalarProperty Name="CVLAN_KHACH_HANGJoin" ColumnName="CVLAN_KHACH_HANGJoin" />
+                <ScalarProperty Name="ID_LOAIDICHVU_KHACH_HANGJoin" ColumnName="ID_LOAIDICHVU_KHACH_HANGJoin" />
+                <ScalarProperty Name="ID_NHOMKHACHHANG_KHACH_HANGJoin" ColumnName="ID_NHOMKHACHHANG_KHACH_HANGJoin" />
+                <ScalarProperty Name="ID_TRANGTHAI_KHACH_HANGJoin" ColumnName="ID_TRANGTHAI_KHACH_HANGJoin" />
+                <ScalarProperty Name="ID_VUNGKETNOI_KHACH_HANGJoin" ColumnName="ID_VUNGKETNOI_KHACH_HANGJoin" />
+                <ScalarProperty Name="IPGATEWAY_KHACH_HANGJoin" ColumnName="IPGATEWAY_KHACH_HANGJoin" />
+                <ScalarProperty Name="IPLAN_KHACH_HANGJoin" ColumnName="IPLAN_KHACH_HANGJoin" />
+                <ScalarProperty Name="IPWAN_KHACH_HANGJoin" ColumnName="IPWAN_KHACH_HANGJoin" />
+                <ScalarProperty Name="SVLAN_KHACH_HANGJoin" ColumnName="SVLAN_KHACH_HANGJoin" />
+                <ScalarProperty Name="TEN_KHACHHANG_KHACH_HANGJoin" ColumnName="TEN_KHACHHANG_KHACH_HANGJoin" />
+                <ScalarProperty Name="THOIGIAN_CUNGCAP_KHACH_HANGJoin" ColumnName="THOIGIAN_CUNGCAP_KHACH_HANGJoin" />
+                <ScalarProperty Name="TEN_THIETBI_THIET_BIJoin" ColumnName="TEN_THIETBI_THIET_BIJoin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

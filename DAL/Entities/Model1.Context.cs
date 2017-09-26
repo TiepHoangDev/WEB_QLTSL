@@ -714,5 +714,14 @@ namespace DAL.Entities
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_NGUOI_DUNG_ResetPassword", iD_AdminParameter, rePasswordParameter, iD_NGUOIDUNGParameter);
         }
+    
+        public virtual ObjectResult<SP_KHACHHANG_THIETBI_GetByID_KHACHHANG_Result> SP_KHACHHANG_THIETBI_GetByID_KHACHHANG(Nullable<int> iD_KHACHHANG)
+        {
+            var iD_KHACHHANGParameter = iD_KHACHHANG.HasValue ?
+                new ObjectParameter("ID_KHACHHANG", iD_KHACHHANG) :
+                new ObjectParameter("ID_KHACHHANG", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_KHACHHANG_THIETBI_GetByID_KHACHHANG_Result>("SP_KHACHHANG_THIETBI_GetByID_KHACHHANG", iD_KHACHHANGParameter);
+        }
     }
 }

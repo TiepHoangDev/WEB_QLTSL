@@ -7,35 +7,39 @@ namespace BUS
 {
     public class KHACHHANG_THIETBI_Bus
     {
-        
-public List<KHACHHANG_THIETBI_Object> GetAll()
-{
-    return new KHACHHANG_THIETBI_Dao().GetAll();
-}
 
-        
-public KHACHHANG_THIETBI_Object GetByID(System.Int32 ID)
-{
-    return new KHACHHANG_THIETBI_Dao().GetByID(ID);
-}
+        public List<KHACHHANG_THIETBI_Object> GetAll()
+        {
+            return new KHACHHANG_THIETBI_Dao().GetAll();
+        }
 
-        
-public bool Insert(KHACHHANG_THIETBI_Object ob)
-{
-    return new KHACHHANG_THIETBI_Dao().Insert(ob);
-}
 
-        
-public bool Delete(System.Int32 ID)
-{
-    return new KHACHHANG_THIETBI_Dao().Delete(ID);
-}
+        public KHACHHANG_THIETBI_Object GetByID(System.Int32 ID)
+        {
+            return new KHACHHANG_THIETBI_Dao().GetByID(ID);
+        }
 
-        
-public bool Update(KHACHHANG_THIETBI_Object ob)
-{
-    return new KHACHHANG_THIETBI_Dao().Update(ob);
-}
 
+        public bool Insert(KHACHHANG_THIETBI_Object ob)
+        {
+            return new KHACHHANG_THIETBI_Dao().Insert(ob);
+        }
+
+
+        public bool Delete(System.Int32 ID)
+        {
+            return new KHACHHANG_THIETBI_Dao().Delete(ID);
+        }
+
+
+        public bool Update(KHACHHANG_THIETBI_Object ob)
+        {
+            return new KHACHHANG_THIETBI_Dao().Update(ob);
+        }
+
+        public List<KHACHHANG_THIETBI_Object> GetByID_KHACHHANG(int ID_KHACHHANG)
+        {
+            return new KHACHHANG_THIETBI_Dao().GetByID_KHACHHANG(ID_KHACHHANG);
+        }
     }
 }

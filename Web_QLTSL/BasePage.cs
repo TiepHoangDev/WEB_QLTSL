@@ -19,7 +19,12 @@ namespace Web_QLTSL
             var acc = new Core.Login().GetNguoiDung();
 
             //kiểm tra null và check quyền
-            if (acc == null || CheckQuyen(Core.eQUYEN.XEM) == false)
+            if (acc == null)
+            {
+                //nếu ko có tài khoản sẽ chuyển sang trang Login
+                Response.Redirect("/Login.aspx");
+            }
+            else if (CheckQuyen(Core.eQUYEN.XEM) == false)
             {
                 //nếu ko có quyền sẽ chuyển sang trang NotQUYEN
                 Response.Redirect("/NotQUYEN.aspx");

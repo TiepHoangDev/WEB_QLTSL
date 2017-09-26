@@ -49,6 +49,7 @@ namespace Web_QLTSL.Page.KhachHang_ThietBi
             };
             if (isCreate) new KHACHHANG_THIETBI_Bus().Insert(ob);
             else new KHACHHANG_THIETBI_Bus().Update(ob);
+            new Log_he_thong.LogHeThong().Add(isCreate ? Log_he_thong.LogHeThong.eAction.Add : Log_he_thong.LogHeThong.eAction.Edit);
             Response.Redirect("default.aspx");
         }
     }

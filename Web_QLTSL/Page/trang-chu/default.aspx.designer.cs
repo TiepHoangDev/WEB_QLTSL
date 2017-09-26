@@ -22,15 +22,6 @@ namespace Web_QLTSL.Page.trang_chu {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor btnThem;
         
         /// <summary>
-        /// repeater control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repeater;
-        
-        /// <summary>
         /// btnExcel control.
         /// </summary>
         /// <remarks>
@@ -38,5 +29,14 @@ namespace Web_QLTSL.Page.trang_chu {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnExcel;
+        
+        /// <summary>
+        /// repeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repeater;
     }
 }

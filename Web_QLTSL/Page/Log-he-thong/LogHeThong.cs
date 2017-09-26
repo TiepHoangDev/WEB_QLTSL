@@ -10,7 +10,7 @@ namespace Web_QLTSL.Page.Log_he_thong
     {
         public enum eAction
         {
-            Add, Edit, Delete
+            Add, Edit, Delete, Expert_Excel
         }
 
         public string LoadOfDate(DateTime? date = null)
@@ -33,7 +33,7 @@ namespace Web_QLTSL.Page.Log_he_thong
             var acc = new Core.Login().GetNguoiDung();
             if (acc == null) return;
             string link = HttpContext.Current.Request.Url.ToString();
-            string message = string.Format("[{0}] >> Người dùng [{1}] thao tác [{2}] tại [{3}] <a href='{4}'>{4}</a>.", DateTime.Now, acc.HO_TEN, action.ToString(), link.Split('/')[4], link);
+            string message = string.Format("[{0}] >> [<b>{1}</b>]   -   [<b>{2}</b>]   -   [<b>{3}</b>]   -  <a href='{4}'><b>[{4}]</b></a>.", DateTime.Now, acc.HO_TEN, action.ToString(), link.Split('/')[4], link);
             var file = GetName();
             if (File.Exists(file))
                 using (StreamWriter sw = File.AppendText(file))
@@ -51,7 +51,7 @@ namespace Web_QLTSL.Page.Log_he_thong
         {
             var file = GetName(date);
             if (File.Exists(file)) return File.ReadAllLines(file);
-            else return new string[] {};
+            else return new string[] { "Không có log nào" };
         }
     }
 }

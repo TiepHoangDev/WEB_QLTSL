@@ -281,9 +281,11 @@
     <Content Include="Page\phan-quyen\default.aspx" />
     <Content Include="Page\phan-quyen\delete.aspx" />
     <Content Include="Page\phan-quyen\edit.aspx" />
+    <Content Include="Page\tai-khoan\ChangePassword.aspx" />
     <Content Include="Page\tai-khoan\default.aspx" />
     <Content Include="Page\tai-khoan\delete.aspx" />
     <Content Include="Page\tai-khoan\edit.aspx" />
+    <Content Include="Page\tai-khoan\Profile.aspx" />
     <Content Include="Page\tai-khoan\reset.aspx" />
     <Content Include="Page\thiet-bi\default.aspx" />
     <Content Include="Page\thiet-bi\delete.aspx" />
@@ -489,6 +491,13 @@
       <DependentUpon>edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\phan-quyen\Quyen.cs" />
+    <Compile Include="Page\tai-khoan\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\tai-khoan\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\tai-khoan\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -509,6 +518,13 @@
     </Compile>
     <Compile Include="Page\tai-khoan\edit.aspx.designer.cs">
       <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\tai-khoan\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\tai-khoan\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\tai-khoan\reset.aspx.cs">
       <DependentUpon>reset.aspx</DependentUpon>

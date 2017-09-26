@@ -18,7 +18,7 @@ namespace Web_QLTSL.Page.loai_dich_vu
             isCreate = Request.QueryString[""] == null || !int.TryParse(Request.QueryString[""].ToString(), out id);
             if (!IsPostBack)
             {
-                ltrAction.Text = (isCreate ? "Thêm mới" : "Sửa") + " nhóm khách hàng";
+                ltrAction.Text = (isCreate ? "Thêm mới" : "Sửa") + " Loại dịch vụ";
                 LoadData();
             }
         }

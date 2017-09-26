@@ -17,12 +17,12 @@
         <div class="form-group">
             <input type="checkbox" runat="server" id="cbXem" />
             <asp:HiddenField ID="hiddenIDXem" runat="server" />
-            <label for="body_cbXem">Xem</label>
+            <label for="body_cbXem">Cho phép <b>Xem</b></label>
         </div>
         <div class="form-group">
             <input type="checkbox" runat="server" id="cbThemSuaXoa" />
             <asp:HiddenField ID="hiddenIDThemSuaXoa" runat="server" />
-            <label for="body_cbThemSuaXoa">Thêm sửa xóa</label>
+            <label for="body_cbThemSuaXoa">Cho phép <b>Thêm sửa xóa</b></label>
         </div>
     </div>
     <div class="box-footer">

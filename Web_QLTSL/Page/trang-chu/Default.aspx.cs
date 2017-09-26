@@ -32,8 +32,23 @@ namespace Web_QLTSL.Page.trang_chu
             //khởi tạo GridView lưu kết quả
             GridView grv = new GridView();
 
-            //gán source cho GridView
-            grv.DataSource = new BUS.KHACH_HANG_Bus().GetAll();
+            //gán source cho GridView, đây là LinQ
+            grv.DataSource = (from k in new KHACH_HANG_Bus().GetAll()
+                              orderby k.THOIGIAN_CUNGCAP descending
+                              select new
+                              {
+                                  Thời_gian_cung_cấp = k.THOIGIAN_CUNGCAP,
+                                  Tên_khách_hàng = k.TEN_KHACHHANG,
+                                  Trạng_thái = k.TRANG_THAI_ObjectJoin.TEN_TRANGTHAI,
+                                  Loại_dịch_vụ = k.LOAI_DICHVU_ObjectJoin.TEN_LOAI_DICHVU,
+                                  Nhóm_khách_hàng = k.NHOM_KHACH_HANG_ObjectJoin.TEN_NHOMKHACHHANG,
+                                  Vùng_kết_nối = k.VUNGKETNOI_ObjectJoin.TEN_VUNGKETNOI,
+                                  k.CVLAN,
+                                  k.IPGATEWAY,
+                                  k.IPLAN,
+                                  k.IPWAN,
+                                  k.SVLAN
+                              });
 
             //đổ data lên GridView
             grv.DataBind();
@@ -50,6 +65,7 @@ namespace Web_QLTSL.Page.trang_chu
             Response.Output.Write(sw.ToString());
             Response.Flush();
             Response.End();
+            new Log_he_thong.LogHeThong().Add(Log_he_thong.LogHeThong.eAction.Expert_Excel);
         }
     }
 }

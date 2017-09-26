@@ -88,14 +88,21 @@
                             </a>
 
                             <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                                <%--<li>
-                                    <a href="profile.html">
+                                <li>
+                                    <a href="/Page/tai-khoan/Profile.aspx">
                                         <i class="ace-icon fa fa-user"></i>
-                                        Profile
+                                        Sửa thông tin cá nhân
                                     </a>
                                 </li>
 
-                                <li class="divider"></li>--%>
+                                 <li>
+                                    <a href="/page/tai-khoan/ChangePassword.aspx">
+                                        <i class="ace-icon fa fa-user"></i>
+                                        Đổi mật khẩu
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
 
                                 <li>
                                     <a href="/Login.aspx?=out">
@@ -124,78 +131,17 @@
                 <ul class="nav nav-list">
                     <li class="active">
                         <a href="/page/trang-chu">
-                            <i class="menu-icon fa fa-tachometer"></i>
+                            <i class="menu-icon fa fa-home"></i>
                             <span class="menu-text">Trang chủ</span>
                         </a>
 
                         <b class="arrow"></b>
                     </li>
 
-                    <li class="">
-                        <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-desktop"></i>
-                            <span class="menu-text">Danh mục</span>
-                            <b class="arrow fa fa-angle-down"></b>
-                        </a>
-                        <b class="arrow"></b>
-
-
-                        <ul class="submenu">
-                            <li class="">
-                                <a href="/Page/don-vi">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Đơn vị
-                                </a>
-                                <b class="arrow fa fa-angle-down"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="/Page/loai-dich-vu">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Loại dịch vụ
-                                </a>
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="/Page/nhom-khach-hang">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Nhóm khách hàng
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="/Page/thiet-bi">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Thiết bị
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-                            <li class="">
-                                <a href="/Page/trang-thai">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Trạng thái
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-                            <li class="">
-                                <a href="/Page/vung-ket-noi">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Vùng kết nối
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-                        </ul>
-                    </li>
 
                     <li class="">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-desktop"></i>
+                            <i class="menu-icon fa fa-cogs"></i>
                             <span class="menu-text">Hệ thống</span>
                             <b class="arrow fa fa-angle-down"></b>
                         </a>
@@ -236,7 +182,70 @@
                                 <b class="arrow"></b>
                             </li>
 
+
                         </ul>
+                        <li class="">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="menu-icon fa fa-list"></i>
+                                <span class="menu-text">Danh mục</span>
+                                <b class="arrow fa fa-angle-down"></b>
+                            </a>
+                            <b class="arrow"></b>
+
+
+                            <ul class="submenu">
+                                <li class="">
+                                    <a href="/Page/don-vi">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Đơn vị
+                                    </a>
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </li>
+
+                                <li class="">
+                                    <a href="/Page/loai-dich-vu">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Loại dịch vụ
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+
+                                <li class="">
+                                    <a href="/Page/nhom-khach-hang">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Nhóm khách hàng
+                                    </a>
+
+                                    <b class="arrow"></b>
+                                </li>
+
+                                <li class="">
+                                    <a href="/Page/thiet-bi">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Thiết bị
+                                    </a>
+
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/Page/trang-thai">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Trạng thái
+                                    </a>
+
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/Page/vung-ket-noi">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Vùng kết nối
+                                    </a>
+
+                                    <b class="arrow"></b>
+                                </li>
+                            </ul>
+                        </li>
+
                     </li>
 
                 </ul>

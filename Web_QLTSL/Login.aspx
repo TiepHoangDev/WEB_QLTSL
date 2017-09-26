@@ -61,7 +61,7 @@
                                     <div class="widget-main">
                                         <h4 class="header blue lighter bigger">
                                             <i class="ace-icon fa fa-coffee green"></i>
-                                            Please Enter Your Information
+                                            Đăng nhập hệ thống QLTSL
                                         </h4>
 
                                         <div class="space-6"></div>
@@ -73,14 +73,14 @@
                                             <fieldset>
                                                 <label class="block clearfix">
                                                     <span class="block input-icon input-icon-right">
-                                                        <input id="txtUsername" type="text" class="form-control" placeholder="Username" runat="server" />
+                                                        <input id="txtUsername" type="text" class="form-control" placeholder="Tên đăng nhập" runat="server" />
                                                         <i class="ace-icon fa fa-user"></i>
                                                     </span>
                                                 </label>
 
                                                 <label class="block clearfix">
                                                     <span class="block input-icon input-icon-right">
-                                                        <input id="txtPassword" runat="server" type="password" class="form-control" placeholder="Password" />
+                                                        <input id="txtPassword" runat="server" type="password" class="form-control" placeholder="Mật khẩu" />
                                                         <i class="ace-icon fa fa-lock"></i>
                                                     </span>
                                                 </label>

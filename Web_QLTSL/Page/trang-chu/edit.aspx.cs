@@ -67,7 +67,7 @@ namespace Web_QLTSL.Page.trang_chu
                 IPWAN = IPWAN.Value,
                 SVLAN = int.Parse(SVLAN.Value),
                 TEN_KHACHHANG = txtTenKhachHang.Value,
-                THOIGIAN_CUNGCAP = DateTime.Parse(txtdate.Value)
+                THOIGIAN_CUNGCAP = DateTime.ParseExact(txtdate.Value, "dd/MM/yyyy", null)
             };
             if (isCreate) new KHACH_HANG_Bus().Insert(ob);
             else new KHACH_HANG_Bus().Update(ob);

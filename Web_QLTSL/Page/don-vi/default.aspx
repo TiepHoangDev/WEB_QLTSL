@@ -5,7 +5,7 @@
     <script src="/Content/assets/js/jquery.dataTables.bootstrap.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-    <h2>Danh sách Khách hàng sử dụng thiết bị</h2>
+    <h2>Danh sách Đơn vị</h2>
     <div>
         <a href="edit.aspx" runat="server" id="btnThem" visible='<%# allowThem_Sua_Xoa %>' class="btn btn-success">Thêm mới</a>
     </div>

@@ -18,7 +18,7 @@ namespace Web_QLTSL.Page.thiet_bi
             isCreate = Request.QueryString[""] == null || !int.TryParse(Request.QueryString[""].ToString(), out id);
             if (!IsPostBack)
             {
-                ltrAction.Text = (isCreate ? "Thêm mới" : "Sửa") + " nhóm khách hàng";
+                ltrAction.Text = (isCreate ? "Thêm mới" : "Sửa") + " thiết bị";
                 LoadData();
             }
         }

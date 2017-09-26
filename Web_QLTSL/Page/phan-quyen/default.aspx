@@ -16,7 +16,7 @@
             font-weight: bold;
         }
     </style>
-    <h2>Danh sách Quyền của người dùng</h2>
+    <h2>Phân quyền cho người dùng</h2>
     <div>
         <a href="edit.aspx" runat="server" id="btnThem" visible='<%# allowThem_Sua_Xoa %>' class="btn btn-success">Thêm mới</a>
     </div>

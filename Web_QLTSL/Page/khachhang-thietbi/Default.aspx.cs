@@ -57,6 +57,7 @@ namespace Web_QLTSL.Page.KhachHang_ThietBi
             Response.Output.Write(sw.ToString());
             Response.Flush();
             Response.End();
+            new Log_he_thong.LogHeThong().Add(Log_he_thong.LogHeThong.eAction.Expert_Excel);
         }
     }
 }

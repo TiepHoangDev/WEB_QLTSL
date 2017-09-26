@@ -32,7 +32,7 @@
             <asp:Repeater ID="repeater" runat="server">
                 <ItemTemplate>
                     <tr>
-                        <td><a href="<%#Eval("ID_KHACHHANG","/page/khachhang-thietbi?={0}") %>"><%#Eval("TEN_KHACHHANG") %></a></td>
+                        <td><a href="<%#Eval("ID_KHACHHANG","/page/khachhang-thietbi/edit.aspx?={0}") %>"><%#Eval("TEN_KHACHHANG") %></a></td>
                         <td><%#((DateTime)Eval("THOIGIAN_CUNGCAP")).ToString("dd-MM-yyyy") %></td>
                         <td><%#Eval("IPGATEWAY") %></td>
                         <td><%#Eval("IPLAN") %></td>
